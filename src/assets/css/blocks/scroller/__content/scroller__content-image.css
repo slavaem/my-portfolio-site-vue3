@@ -1,0 +1,35 @@
+.scroller__content-image {
+width: 5%;
+padding-left: 1%;
+vertical-align: middle;
+}
+
+.scroller__content-image-js{
+width: 5.5%;
+padding-left: 1%;
+vertical-align: middle;
+} 
+.scroller__content-image-css3 {
+  width: 4.5%;
+  padding-left: 1%;
+  vertical-align: middle;
+  } 
+.scroller__content-image-php {
+  width: 7%;
+  padding-left: 1%;
+  vertical-align: middle;
+  }
+ @media screen and (max-width: 767px) {
+ .scroller__content-image {
+ width: 12%;
+ }
+ .scroller__content-image-js {
+ width: 11.5%;
+ }
+ .scroller__content-image-css3 {
+ width: 10%;
+ }
+ .scroller__content-image-php {
+ width: 20%;
+ }
+ }

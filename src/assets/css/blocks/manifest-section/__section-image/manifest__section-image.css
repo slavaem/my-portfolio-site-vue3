@@ -1,0 +1,33 @@
+.manifest__section-image {
+background-color: ;
+line-height: 0;
+margin-bottom: -35px;
+width: 15vw;}
+.manifest__section-image-tools {
+width: 5%;
+}
+@media screen and (max-width: 640px) {
+.manifest__section-image {
+
+width: 30%;}
+.manifest__section-image-tools {
+width: 10%;
+}
+}
+@media screen and (max-width: 425px) {
+.manifest__section-image {
+width: 55%;}
+.manifest__section-image-tools {
+width: 20%;
+}
+}
+@media screen and (max-width: 320px) {
+.manifest__section-image {
+background-color: ;
+line-height: 0;
+margin-bottom: -60px;
+width: 50%;}
+.manifest__section-image-tools {
+width: 20%;
+}
+}

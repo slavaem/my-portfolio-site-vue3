@@ -1,0 +1,35 @@
+.scroller__text {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 3vh auto 0;
+  padding: 0 5%;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 32px); 
+  line-height: clamp(1.8, 4vw, 2.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.scroller__text p {
+  text-shadow:
+    0 0 2px #000,
+    1px 1px 0 yellow,
+    2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 425px) {
+  .scroller__text {
+    font-size: clamp(18px, 5vw, 24px); 
+    line-height: clamp(2, 5vw, 2.4); 
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .scroller__text {
+    margin-top: -5vh;
+    line-height: 2.5;
+  }
+}

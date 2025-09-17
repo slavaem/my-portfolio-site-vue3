@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGradM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffcc70"/>
+      <stop offset="100%" stop-color="#87ceeb"/>
+    </linearGradient>
+    <radialGradient id="sunGradM" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7c2"/>
+      <stop offset="100%" stop-color="rgba(255,215,0,0)"/>
+    </radialGradient>
+    <linearGradient id="cloudGradM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#skyGradM)"/>
+
+  <!-- Солнце -->
+<circle cx="400" r="120" fill="url(#sunGradM)">
+  <animate
+    attributeName="cy"
+    dur="30s"
+    repeatCount="indefinite"
+    values="1000;300;300;1000"
+    keyTimes="0;0.45;0.55;1"
+  />
+</circle>
+
+  <!-- Дальние горы -->
+  <path d="M0 700 L200 400 L400 700 L600 450 L800 700 L800 1200 L0 1200 Z" fill="#556b2f" opacity="0.6">
+    <animate attributeName="fill" values="#556b2f;#6b8e23;#556b2f" dur="20s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Ближние горы -->
+  <path d="M0 850 L200 550 L400 850 L600 600 L800 850 L800 1200 L0 1200 Z" fill="#2e4d25" opacity="0.85">
+    <animate attributeName="fill" values="#2e4d25;#3b6b35;#2e4d25" dur="20s" repeatCount="indefinite"/>
+  </path>
+
+<!-- Объёмный туман -->
+<g opacity="0.5">
+  <ellipse cx="400" cy="1000" rx="600" ry="120" fill="url(#cloudGradM)">
+    <animateTransform attributeName="transform" type="translate" from="-150 0" to="150 0" dur="40s" repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="400" cy="1040" rx="700" ry="100" fill="url(#cloudGradM)" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" from="150 0" to="-150 0" dur="50s" repeatCount="indefinite" />
+  </ellipse>
+</g>
+</svg>

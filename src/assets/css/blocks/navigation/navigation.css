@@ -1,0 +1,103 @@
+/*** Navigation Styles ***/
+.navigation {
+  width: 100vw;
+  height: 20%;
+  background: rgba(70, 178, 240, 0.975);;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  z-index: 11;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.navigation.navShadow {
+  box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+  height: 15%;
+}
+.navigation.navShadow .navigation__word-mark {
+  opacity: 0;
+}
+.navigation ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+   align-items: center;
+}
+.navigation li {
+  margin-left: 20px;
+  
+}
+.navigation li img {
+  width: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 5px #00ccff);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+.navigation ul {
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: .1%;
+    row-gap: .1%;
+    align-items: center;
+    justify-items: center;
+    height: 0;
+    padding: 0;
+    background: rgba(121, 237, 252, 1);
+    position: absolute;
+    top: 80%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+  }
+.navigation ul.showMenu {
+    height: 250px;
+  }
+.navigation ul.showMenu li {
+    height: 80px;
+    opacity: 1;
+    visibility: visible;  
+  }
+
+ .navigation li:nth-child(odd) {
+    display: flex;
+    width: 80%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s 0.1s;
+    transition: all 0.3s 0.1s;
+    margin-left: 0px;
+    justify-content: end;  
+    position: relative;
+   
+  }
+  .navigation li:nth-child(even) {
+  display: flex;
+  width: 80%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s 0.1s;
+  transition: all 0.3s 0.1s;
+  margin-left: 0px;
+  justify-content: start;  
+  position: relative;
+ 
+  }
+  .navigation li img {
+  width: 15vmin;
+  padding-top: 0;
+  
+  }
+} 

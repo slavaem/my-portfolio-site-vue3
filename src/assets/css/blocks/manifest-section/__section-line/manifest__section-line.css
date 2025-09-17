@@ -1,0 +1,39 @@
+.manifest__section-line {
+  position: static;
+  width: 99%;
+  height: auto;
+  margin: 0 auto;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
+  font-size: calc(100vw / 35);
+  line-height: 1.5;
+  text-align: center;
+  color: white;
+  margin-top: 35vh;  
+}
+@media screen and (max-width: 820px) {
+.manifest__section-line {
+ font-size: calc(100vw / 30);
+ line-height: 1.5;
+ margin-top: 45vh
+}
+} 
+@media screen and (max-width: 640px) {
+.manifest__section-line {
+font-size: calc(100vw / 20);
+margin-top: 35vh;
+}
+} 
+@media screen and (max-width: 425px) {
+.manifest__section-line {
+font-size: calc(100vw / 16);
+margin-top: 25vh;
+line-height: 2;
+}
+}
+@media screen and (max-width: 320px) {
+ .manifest__section-line {
+font-size: calc(100vw / 15);
+
+ }
+}

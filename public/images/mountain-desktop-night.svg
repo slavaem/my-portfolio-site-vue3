@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Небо -->
+    <linearGradient id="skyNightDesk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#081028"/>
+      <stop offset="65%" stop-color="#0f1740"/>
+      <stop offset="100%" stop-color="#152352"/>
+    </linearGradient>
+
+    <!-- Ореол луны -->
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffbe6"/>
+      <stop offset="70%" stop-color="#fffbe6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fffbe6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Туман -->
+    <linearGradient id="fogGradDesk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#dfeeff" stop-opacity="0.14"/>
+      <stop offset="50%"  stop-color="#bcd0f0" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#dfeeff" stop-opacity="0.14"/>
+    </linearGradient>
+
+    <!-- Звезда (базовая) -->
+    <symbol id="star" viewBox="0 0 2 2">
+      <circle cx="1" cy="1" r="1" fill="#f6f7ff"/>
+    </symbol>
+
+    <!-- Облака -->
+    <linearGradient id="nightCloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#e7edf6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7b8698" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Свечение для облаков/ярких элементов -->
+    <filter id="glowSoft">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Диффракционный крест для яркой звезды -->
+    <filter id="starSpike">
+      <feGaussianBlur stdDeviation="0.6" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Анимации (можно глобально замедлить, изменив dur) -->
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+      }
+      .twinkle { animation: t 6s infinite; }
+      @keyframes t { 0%,100%{opacity:1} 50%{opacity:.35} }
+    </style>
+  </defs>
+
+  <!-- Небо -->
+  <rect width="1920" height="1080" fill="url(#skyNightDesk)"/>
+
+  <!-- Плотное поле звезд (верхние 60% экрана) -->
+  <g opacity="0.95">
+    <!-- сетка «рассыпью» + несколько use -->
+    <!-- крупные -->
+    <circle cx="220" cy="120" r="2.2" fill="#fff" class="twinkle"/>
+    <circle cx="820" cy="90"  r="2.0" fill="#fff" class="twinkle"/>
+    <circle cx="1520" cy="160" r="2.4" fill="#fff" class="twinkle" style="animation-duration:7s"/>
+    <circle cx="1180" cy="220" r="2.1" fill="#fff"/>
+    <!-- средние -->
+    <circle cx="360" cy="180" r="1.5" fill="#fefefe" class="twinkle" style="animation-duration:5s"/>
+    <circle cx="640" cy="240" r="1.6" fill="#fff"/>
+    <circle cx="980" cy="140" r="1.4" fill="#fff" class="twinkle" style="animation-duration:8s"/>
+    <circle cx="1720" cy="220" r="1.6" fill="#fff"/>
+    <circle cx="1400" cy="280" r="1.5" fill="#fff" class="twinkle"/>
+    <!-- мелкие россыпью -->
+    <!-- верхняя полоса -->
+    <g fill="#fff" opacity="0.9">
+      <circle cx="120" cy="80" r="0.9"/><circle cx="200" cy="60" r="0.8"/><circle cx="300" cy="90" r="1.0"/>
+      <circle cx="420" cy="70" r="0.8"/><circle cx="520" cy="110" r="0.9"/><circle cx="610" cy="60" r="0.7"/>
+      <circle cx="740" cy="100" r="0.9"/><circle cx="860" cy="60" r="0.8"/><circle cx="940" cy="120" r="1.0"/>
+      <circle cx="1060" cy="80" r="0.8"/><circle cx="1180" cy="110" r="0.9"/><circle cx="1300" cy="70" r="0.8"/>
+      <circle cx="1450" cy="100" r="0.9"/><circle cx="1580" cy="60" r="0.8"/><circle cx="1700" cy="90" r="0.9"/>
+    </g>
+    <!-- «млечный путь» диагональ -->
+    <g fill="#fff" opacity="0.55">
+      <circle cx="200" cy="220" r="0.6"/><circle cx="320" cy="260" r="0.5"/><circle cx="440" cy="300" r="0.6"/>
+      <circle cx="560" cy="340" r="0.5"/><circle cx="680" cy="380" r="0.6"/><circle cx="800" cy="320" r="0.5"/>
+      <circle cx="920" cy="360" r="0.6"/><circle cx="1040" cy="400" r="0.5"/><circle cx="1160" cy="360" r="0.6"/>
+      <circle cx="1280" cy="400" r="0.5"/><circle cx="1400" cy="440" r="0.6"/><circle cx="1520" cy="420" r="0.5"/>
+      <circle cx="1640" cy="460" r="0.6"/>
+    </g>
+  </g>
+
+  <!-- Яркая «Венера» -->
+  <g id="brightStar" transform="translate(260,330)">
+    <!-- ореол -->
+    <circle r="18" fill="#ffffff" opacity="0.28">
+      <animate attributeName="r" values="16;20;16" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.22;0.5;0.22" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- крестовые лучи -->
+    <g filter="url(#starSpike)" opacity="0.8">
+      <rect x="-1" y="-40" width="2" height="80" fill="#fff"/>
+      <rect x="-40" y="-1" width="80" height="2" fill="#fff"/>
+      <rect x="-1" y="-40" width="2" height="80" fill="#fff" transform="rotate(45)"/>
+      <rect x="-1" y="-40" width="2" height="80" fill="#fff" transform="rotate(-45)"/>
+    </g>
+    <!-- ядро -->
+    <circle r="5" fill="#ffffff">
+      <animate attributeName="opacity" values="1;0.7;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Луна (группа двигается целиком: ореол + диск) -->
+  <g id="moon" opacity="0.95">
+    <g>
+      <circle cx="1420" cy="220" r="180" fill="url(#moonGlow)"/>
+      <circle cx="1420" cy="220" r="85" fill="#fff9d8"/>
+      <animateTransform attributeName="transform" type="translate" dur="60s" repeatCount="indefinite"
+        values="0,820; 0,0; 0,0; 0,820" keyTimes="0;0.45;0.55;1"/>
+    </g>
+  </g>
+
+  <!-- Облака (три тонких слоя, очень медленно) -->
+  <g id="clouds" filter="url(#glowSoft)" opacity="0.65">
+    <!-- слой 1 (дальний, самый медленный) -->
+    <g transform="translate(-400,120) scale(3,1.4)">
+      <path fill="url(#nightCloudGrad)">
+        <animate attributeName="d" dur="120s" repeatCount="indefinite"
+          values="M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z;
+                  M60,170c-7-18-16-18-21-33c-8-22,1-55,21-68c20-13,33,6,67-3c27-7,27-20,55-26c12-3,42-9,61,7c19,17,16,47,15,58c-2,23-11,25-10,46c1,22,12,26,9,43c-2,18-16,38-34,41c-22,4-29-22-55-23c-31,0-41,39-69,36c-17-2-32-20-37-35C58,200,67,192,60,170z;
+                  M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z"/>
+      </path>
+      <animateTransform attributeName="transform" type="translate"
+        values="-200 0; 200 0; -200 0" dur="280s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- слой 2 -->
+    <g transform="translate(-300,210) scale(2.6,1.35)" opacity="0.7">
+      <path fill="url(#nightCloudGrad)">
+        <animate attributeName="d" dur="110s" repeatCount="indefinite"
+          values="M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z;
+                  M60,170c-7-18-16-18-21-33c-8-22,1-55,21-68c20-13,33,6,67-3c27-7,27-20,55-26c12-3,42-9,61,7c19,17,16,47,15,58c-2,23-11,25-10,46c1,22,12,26,9,43c-2,18-16,38-34,41c-22,4-29-22-55-23c-31,0-41,39-69,36c-17-2-32-20-37-35C58,200,67,192,60,170z;
+                  M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z"/>
+      </path>
+      <animateTransform attributeName="transform" type="translate"
+        values="220 0; -220 0; 220 0" dur="220s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- слой 3 (передний, чуть контрастнее) -->
+    <g transform="translate(-240,300) scale(2.3,1.25)" opacity="0.8">
+      <path fill="url(#nightCloudGrad)">
+        <animate attributeName="d" dur="100s" repeatCount="indefinite"
+          values="M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z;
+                  M60,170c-7-18-16-18-21-33c-8-22,1-55,21-68c20-13,33,6,67-3c27-7,27-20,55-26c12-3,42-9,61,7c19,17,16,47,15,58c-2,23-11,25-10,46c1,22,12,26,9,43c-2,18-16,38-34,41c-22,4-29-22-55-23c-31,0-41,39-69,36c-17-2-32-20-37-35C58,200,67,192,60,170z;
+                  M50,180c-10-12-10-32-6-48c5-16,14-18,28-35c28-32,18-44,40-56c20-11,49-9,68,0c18,8,16,15,42,32c28,18,36,14,45,28c15,23,6,52,4,60c-3,12-7,24-18,32c-16,12-28,1-48,11c-16,9-12,20-28,34c-23,20-63,26-80,10c-15-15,0-42-17-55C75,180,60,192,50,180z"/>
+      </path>
+      <animateTransform attributeName="transform" type="translate"
+        values="-300 0; 300 0; -300 0" dur="160s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Горы -->
+  <path d="M0 560 L200 430 L430 590 L700 460 L980 620 L1260 500 L1920 560 L1920 1080 L0 1080 Z"
+        fill="#1b2648" opacity="0.9"/>
+  <path d="M0 700 L220 560 L480 720 L820 580 L1160 760 L1550 640 L1920 700 L1920 1080 L0 1080 Z"
+        fill="#142046" opacity="0.95"/>
+  <path d="M0 860 L260 720 L560 880 L960 740 L1360 920 L1680 820 L1920 860 L1920 1080 L0 1080 Z"
+        fill="#0f1833"/>
+
+  <!-- Туман у подножия -->
+  <g opacity="0.48">
+    <ellipse cx="960" cy="940" rx="1800" ry="140" fill="url(#fogGradDesk)">
+      <animateTransform attributeName="transform" type="translate"
+        values="-120 0; 120 0; -120 0" dur="200s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="720" cy="1000" rx="900" ry="60" fill="url(#fogGradDesk)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate"
+        values="140 0; -140 0; 140 0" dur="240s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

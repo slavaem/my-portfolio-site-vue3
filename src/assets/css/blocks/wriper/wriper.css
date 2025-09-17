@@ -1,0 +1,10 @@
+.wriper {
+ display: block;
+ position: static;
+ padding: 0;
+ width: 100vw;
+ height: 100vh;
+ overflow: visible;
+ scroll-behavior: smooth; 
+ 
+}

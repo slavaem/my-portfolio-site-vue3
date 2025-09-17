@@ -1,0 +1,10 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(86, 97, 242, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: sticky;
+  z-index: 1000;
+}

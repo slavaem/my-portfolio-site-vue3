@@ -1,0 +1,330 @@
+.formorder {
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+ display: flex !important;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+ width: 60vmax; 
+ height: auto;       
+ position: fixed;
+ overflow: hidden;
+ z-index: 1001;
+ top: 15%;
+ left: 50%;
+  margin-top: 5%;
+ -webkit-transform: translate(-50%, 0);
+     -ms-transform: translate(-50%, 0);
+         transform: translate(-50%, 0);
+ font-family: 'Inter', sans-serif;
+ border-radius: 5px;
+ -webkit-backdrop-filter: blur(6px);
+ backdrop-filter: blur(6px);
+ -webkit-box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+         box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2); 
+ border-top: 2px solid rgba(225, 225, 225, 0.3);
+ border-left: 2px solid rgba(225, 225, 225, 0.1);
+ border-right: 1px solid rgba(225, 225, 225, 0.2);
+ }
+ .formorder__form {
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-rows: 1fr 1% 1.5fr;
+ grid-template-rows: 1fr 2fr;
+ -ms-grid-columns: 1fr;
+ grid-template-columns: 1fr;
+ row-gap: 3%;
+ margin: 3% auto;
+ margin-top: 0.5%;
+ padding-left: 1%;
+ padding-right: 1%;
+ }
+ .formorder__form > *:nth-child(1) {
+ -ms-grid-row: 1;
+ -ms-grid-column: 1;
+ }
+ .formorder__form > *:nth-child(2) {
+ -ms-grid-row: 3;
+ -ms-grid-column: 1;
+ }
+ .formorder label {
+ margin-left: 0;
+ }
+ .formorder fieldset {
+ font-size: calc(100vw /60);
+ }
+ .formorder__wrapermessage {
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 100px 5% 1fr;
+ grid-template-columns: 100px 1fr;
+ z-index: 1;
+ gap: 15%;
+ }
+ .message {
+ -ms-grid-column: 1;
+ -ms-grid-column-span: 1;
+ grid-column: 1 / 2;
+ } 
+ #message {
+ -ms-grid-column: 2;
+ -ms-grid-column-span: 1;
+ grid-column: 2 / 3;
+ min-width: 30vw;
+ min-height: 20vh;
+ }
+ .formorder__contact-name {
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 100px 5% 1fr;
+ grid-template-columns: 100px 1fr;
+ z-index: 1;
+ gap: 15%;
+ margin-bottom: 1%;
+ }
+ .name {
+ -ms-grid-column: 1;
+ -ms-grid-column-span: 1;
+ grid-column: 1 / 2;
+ }
+ 
+ #name {
+ -ms-grid-column: 2;
+ -ms-grid-column-span: 1;
+ grid-column: 2 / 3;
+ min-width: 30vw;
+ }
+ .formorder__contact-email {
+ display: -ms-grid;
+ display: grid;
+ -ms-grid-columns: 100px 5% 1fr;
+ grid-template-columns: 100px 1fr;
+ z-index: 1;
+ gap: 15%;
+ }
+ .email {
+ -ms-grid-column: 1;
+ -ms-grid-column-span: 1;
+ grid-column: 1 / 2;
+ }
+ #email {
+ -ms-grid-column: 2;
+ -ms-grid-column-span: 1;
+ grid-column: 2 / 3;
+ min-width: 30vw;
+ }
+ .formorder fieldset textarea {
+ border-radius: 3px;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ resize: vertical;
+ }
+ .formorder fieldset textarea:focus {
+ border: 2px solid red;
+ }
+ input[type=text]:focus {
+ border: 2px solid red;
+ }
+ input[type=text] {
+ border: 1px solid grey;
+ border-radius: 3px;
+ }
+ input[type=email]:focus {
+ border: 2px solid red;
+ }
+ input[type=email] {
+ border: 1px solid grey;
+ border-radius: 3px;
+ }
+ input[name=capcha] {
+ position: relative;
+ left: 6.5%;
+ transform: translateY(-25%);
+ }
+ 
+ .formorder.togleform {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ }
+ .formorder__order-info {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;}
+ .formorder__imgcaptcha {
+ border: 1px solid gray;
+ background-image: 
+ url(../../../capha/bg_capcha.png);
+ margin-top: 1%;}
+ .formorder__imgrefresh {
+ cursor: pointer;
+ width: 7%;
+ height:5%;
+ margin-left: 0%;
+ }
+ @media all and (max-width: 900px) {
+ .formorder {
+ width: 70vmax; 
+ }
+ .formorder fieldset {
+ font-size: calc(100vw /50);
+ }
+ .formorder__contact-name {
+ gap: 10%;
+ }
+ #name {
+ min-width: 40vw;
+ }
+ .formorder__contact-email {
+ gap: 10%;
+ }
+ #email {
+ min-width: 40vw;
+ }
+ .formorder__wrapermessage {
+ gap: 10%;
+ }
+ #message {
+ min-width: 40vw;
+ }
+ }
+@media all and (max-width: 800px) {
+.formorder fieldset {
+font-size: calc(100vw /45);
+}
+}
+@media all and (max-width: 640px) {
+.formorder {
+top: 15%;
+width: 90%;
+margin-top: 7%;
+}
+.formorder label {
+margin-left: 10px;
+}
+.formorder fieldset {
+font-size: calc(100vw /35);
+}
+.formorder__form {
+row-gap: .5%;
+margin: 3% auto;
+margin-top: 0%;
+padding-left: 0%;
+padding-right: 0%;
+}
+ .formorder__contact-name {
+ gap: 10%;
+ }
+ #name {
+ min-width: 50vw;
+ }
+ .formorder__contact-email {
+ gap: 10%;
+ }
+ #email {
+ min-width: 50vw;
+ }
+ .formorder__wrapermessage {
+ gap: 10%;
+ }
+ #message {
+ min-width: 50vw;
+ }
+}
+@media all and (max-width: 425px) {
+.formorder {
+margin-top: 10%;
+}
+.formorder fieldset {
+font-size: calc(100vw /20);
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+z-index: 1;
+
+-ms-flex-wrap: nowrap;
+flex-wrap: nowrap;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+}
+.formorder__wrapermessage {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+.formorder__contact-email {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+.formorder__contact-name {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+#name, #email, #message {
+margin-left: 10px;
+left: 0;
+margin-top: 1%;
+}
+#name {
+margin-bottom: 1%;
+}
+#message {
+height:25vmin;
+}
+.message {
+top: 0;
+margin-left: 2.8%;
+left: 0;
+}
+.email {
+left: 0;
+margin-left: 2.8%;
+}
+.name {
+left: 0;
+margin-left: 2.8%;
+}
+#name, #email, #message {
+width: 80vmin;
+}
+.formorder__imgrefresh {
+ width:10%;
+ height:5%;
+ margin-left: 8%;
+ }
+ input[name=capcha] {
+ left: 3.5%;
+ }
+}
+@media all and (max-width: 320px) {
+.formorder fieldset {
+font-size: calc(100vw /17);
+}
+}

@@ -1,0 +1,70 @@
+.scroller__content-porfolio {
+max-width: 80%;
+width: 15%;
+height: auto;
+opacity: .8;
+-webkit-transition: -webkit-transform 1s linear;
+transition: -webkit-transform 1s linear;
+-o-transition: transform 1s linear;
+margin-top: 1%;
+}
+.scroller__text__portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  grid-auto-flow: row;
+  grid-gap: 0.5%;
+}
+
+.scroller__text__portfolio img {
+  max-width: 80%;
+  margin: 10px 0;
+  transition: transform 1s linear, opacity 1s linear;
+}
+
+/* Эффект увеличения */
+.scaleplus {
+  transform: scale(var(--scale)) translate(var(--tx), var(--ty));
+  opacity: 1;
+}
+
+/* Эффект уменьшения */
+.scaleminus {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+
+/* --- Медиа --- */
+@media screen and (max-width: 1100px) {
+  .scroller__content-porfolio {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .scroller__content-porfolio {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .scroller__content-porfolio {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .scroller__text__portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .scroller__content-porfolio {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .scroller__content h1 {
+    margin-top: -20%;
+  }
+}
+ 

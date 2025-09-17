@@ -1,0 +1,41 @@
+/* 1. Vendor & fonts */
+@import url('./vendor/normalize.css');
+@import url('./fonts/fonts.css');
+
+/* 2. Header & Navigation (глубокий BEM) */
+@import url('./blocks/wriper/wriper.css');
+@import url('./blocks/header/header.css');
+@import url('./blocks/navigation/navigation.css');
+@import url('./blocks/navigation/__brand/navigation__brand.css');
+@import url('./blocks/navigation/__logo/navigation__logo.css');
+@import url('./blocks/navigation/__menu/navigation__menu.css');
+@import url('./blocks/navigation/__menu-toggle/navigation__menu-toggle.css');
+@import url('./blocks/navigation/__menu-toggle/__menu-icon/navigation__menu-icon.css');
+@import url('./blocks/navigation/__word-mark/navigation__word-mark.css');
+
+/* 3. Manifest section */
+@import url('./blocks/manifest-section/manifest-section.css');
+@import url('./blocks/manifest-section/__section-line/manifest__section-line.css');
+@import url('./blocks/manifest-section/__section-image/manifest__section-image.css');
+
+/* 4. Scroller */
+@import url('./blocks/scroller/scroller.css');
+@import url('./blocks/scroller/__section/scroller__section.css');
+@import url('./blocks/scroller/__content/scroller__content.css');
+@import url('./blocks/scroller/__content/scroller__text.css');
+@import url('./blocks/scroller/__content/scroller__content-image.css');
+@import url('./blocks/scroller/__content/scroller__content-portfolio.css');
+
+/* 5. FormOrder */
+@import url('./blocks/formorder/formorder.css');
+@import url('./blocks/formorder/__button/formorder__button.css');
+
+/* 6. Connection & modal */
+@import url('./blocks/connection/connection.css');
+@import url('./blocks/modal/modal__pagehome.css');
+
+/* 7. Animation */
+@import url('./blocks/animation/illustration-to-animate.css');
+
+/* 8. Footer */
+@import url('./blocks/footer/footer.css');

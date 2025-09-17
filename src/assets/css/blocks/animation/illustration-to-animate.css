@@ -1,0 +1,90 @@
+ .animate .illustration-to-animate  {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-name: animationtext;
+          animation-name: animationtext;
+  
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          
+}
+.animation-delay--1 {-webkit-animation-delay: 0s;
+                      animation-delay: 0s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--2 {-webkit-animation-delay: .5s;
+                      animation-delay: .5s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--3 {-webkit-animation-delay: 1s;
+                      animation-delay: 1s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--4 {-webkit-animation-delay: 1.5s;
+                      animation-delay: 1.5s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--5 {-webkit-animation-delay: 2s;
+                      animation-delay: 2s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--6 {-webkit-animation-delay: 2.5s;
+                      animation-delay: 2.5s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--7 {-webkit-animation-delay: 3s;
+                      animation-delay: 3s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}
+.animation-delay--8 {-webkit-animation-delay: 3.5s;
+                      animation-delay: 3.5s;
+                      -webkit-animation-duration: 3s;
+                      animation-duration: 3s;}              
+.animation-delay--9 {-webkit-animation-delay: 4s;
+                     animation-delay: 4s;
+                     -webkit-animation-duration: 3s;
+                     animation-duration: 3s;}
+.animation-delay--10 {-webkit-animation-delay: 4.5s;
+                    animation-delay: 4.5s;
+                    -webkit-animation-duration: 3.5s;
+                    animation-duration: 3.5s;}
+.animation-delay--11 {-webkit-animation-delay: 5s;
+                    animation-delay: 5s;
+                    -webkit-animation-duration: 4s;
+                    animation-duration: 4s;}
+.animation-delay--12 {-webkit-animation-delay: 5.5s;
+                    animation-delay: 5.5s;
+                    -webkit-animation-duration: 4.5s;
+                    animation-duration: 4.5s;}
+                     
+/* KEYFRAMES */
+
+@-webkit-keyframes animationtext {
+  0% { 
+  filter: blur(3px);
+  opacity: 0;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff; }
+          
+  100% {
+  filter: blur(0px);
+  opacity: 1;
+  text-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff; }
+  }
+@keyframes animationtext {
+   0% { 
+   filter: blur(3px);
+   opacity: 0;
+   text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff; }
+   
+   100% {
+   filter: blur(0px);
+   opacity: 1;
+   text-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff;
+    }
+}

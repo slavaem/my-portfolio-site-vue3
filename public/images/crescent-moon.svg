@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Свечение -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe8a3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffd56b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Лёгкий ореол -->
+  <circle cx="100" cy="100" r="70" fill="url(#glow)">
+    <!-- дыхание ореола -->
+    <animate attributeName="r" values="65;72;65" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="12s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Серп -->
+  <path d="M130 40
+           A70 70 0 1 1 70 160
+           A50 50 0 1 0 130 40Z"
+        fill="#ffe066"
+        stroke="#ffd84d"
+        stroke-width="2">
+    <!-- мягкое дыхание серпа -->
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="10s" repeatCount="indefinite"/>
+    <!-- лёгкое покачивание -->
+    <animateTransform attributeName="transform" type="rotate" values="-2 100 100; 2 100 100; -2 100 100" dur="10s" repeatCount="indefinite"/>
+  </path>
+</svg>

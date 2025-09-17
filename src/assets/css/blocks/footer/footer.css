@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px !important;
+  background: rgba(86, 97, 242, 0.9);
+  font-size: calc(100vw / 55) !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  color: white;
+}
+
+footer p {
+  margin: 2vw;
+}
+
+@media screen and (max-width: 820px) {
+  footer p {
+    font-size: calc(100vw / 45) !important;
+  }
+  } 
+  @media screen and (max-width: 640px) {
+    footer p {
+      font-size: calc(100vw / 40) !important;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    footer p {
+      font-size: calc(100vw / 35) !important;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    footer p {
+      font-size: calc(100vw / 30) !important;
+    }
+  }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Градиенты -->
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffde1" />
+      <stop offset="50%" stop-color="#fff59d" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="rgba(255, 215, 0, 0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Солнце -->
+  <circle cx="420" cy="80" r="60" fill="url(#sunGrad)">
+    <animate attributeName="r" values="55;65;55" dur="6s" repeatCount="indefinite" />
+  </circle>
+
+</svg>
+
+
