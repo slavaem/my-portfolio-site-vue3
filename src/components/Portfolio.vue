@@ -44,8 +44,8 @@ const hoveredIndex = ref(null)
 
 const portfolioItems = [
   {
-    href: '/cleaning/index.php',
-    title: 'Cleaning',
+    href: '/portfolio/cleaning/index.php',
+    title: 'The first website for cleaning',
     imgSrc: '/images/cleaning.jpg',
     alt: 'Cleaning',
     transforms: {
@@ -55,8 +55,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/letter.html',
-    title: 'Letter',
+    href: '/portfolio/letter.html',
+    title: 'Example of letter layout',
     imgSrc: '/images/letter.jpg',
     alt: 'Letter',
     transforms: {
@@ -66,8 +66,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/example/banerletter.html',
-    title: 'Example',
+    href: '/portfolio/example/banerletter.html',
+    title: 'An example of an animated banner for a website',
     imgSrc: '/images/example.jpg',
     alt: 'Example',
     transforms: {
@@ -77,8 +77,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/world/world.html',
-    title: 'Our World',
+    href: '/portfolio/world/world.html',
+    title: 'Our World (parallax effect, video background, picture-in-picture)',
     imgSrc: '/images/world.jpg',
     alt: 'World',
     transforms: {
@@ -88,8 +88,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/quiz/quiz.html',
-    title: 'Quiz',
+    href: '/portfolio/quiz/quiz.html',
+    title: 'A tutorial project using pure JavaScript ',
     imgSrc: '/images/quiz.jpg',
     alt: 'Quiz',
     transforms: {
@@ -99,8 +99,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/kate/kate.php',
-    title: 'Artist Kate Kulish',
+    href: '/portfolio/kate/kate.php',
+    title: 'Precise responsive layot of a sales landin page',
     imgSrc: '/images/Katy.jpg',
     alt: 'Kate Kulish',
     transforms: {
@@ -110,8 +110,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/reactplayer/player.html',
-    title: 'React Player',
+    href: '/portfolio/reactplayer/player.html',
+    title: 'Educatuional project React Player',
     imgSrc: '/images/Reactplayer.jpg',
     alt: 'React Player',
     transforms: {
@@ -121,8 +121,8 @@ const portfolioItems = [
     }
   },
   {
-    href: 'https://www.mriy-dom.com',
-    title: 'Mriy Dom',
+    href: 'https://web.archive.org/web/20241115012632/http://www.mriy-dom.com/',
+    title: 'Website on WordPress Elementor',
     imgSrc: '/images/mriydom.png',
     alt: 'Mriy Dom',
     transforms: {
@@ -133,7 +133,7 @@ const portfolioItems = [
   },
   {
     href: 'https://saaskit.us',
-    title: 'Fernir Company',
+    title: 'Website Fernir Company',
     imgSrc: '/images/Fernir.png',
     alt: 'Fernir Company',
     transforms: {
@@ -143,8 +143,8 @@ const portfolioItems = [
     }
   },
   {
-    href: '/quiz vue/quiz_vue.html',
-    title: 'Quiz Vue',
+    href: '/portfolio/quiz vue/quiz_vue.html',
+    title: 'Educatuional project Quiz Vue3',
     imgSrc: '/images/quiz_vue.jpg',
     alt: 'Quiz Vue',
     transforms: {
@@ -154,14 +154,25 @@ const portfolioItems = [
     }
   },
   {
-    href: 'https://7cobag.com',
-    title: '7cobag',
-    imgSrc: '/images/7cobag.jpg',
-    alt: '7cobag',
+    href: 'https://interactive-landing-vue3.vercel.app/',
+    title: 'interactive landing constructor vue3',
+    imgSrc: '/images/landing vue3.jpg',
+    alt: 'landing page vue3',
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
       mobile: { scale: 3.0, tx: '0%', ty: '-55%' }
+    }
+  },
+  {
+    href: 'https://7cobag.com',
+    title: 'Online store of Korean cosmetics',
+    imgSrc: '/images/7cobag.jpg',
+    alt: 'Online store 7cobag.com',
+    transforms: {
+      desktop: { scale: 2.5, tx: '0%', ty: '0%' },
+      tablet: { scale: 2.5, tx: '0%', ty: '5%' },
+      mobile: { scale: 3.0, tx: '-70%', ty: '-55%' }
     }
   }
 ]
@@ -190,5 +201,128 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.scroller__content-porfolio {
+max-width: 80%;
+width: 15%;
+height: auto;
+opacity: .8;
+-webkit-transition: -webkit-transform 1s linear;
+transition: -webkit-transform 1s linear;
+-o-transition: transform 1s linear;
+margin-top: 1%;
+
+}
+
+.scroller__text__portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  grid-auto-flow: row;
+  grid-gap: 0.5%;
+}
+
+.scroller__text__portfolio img {
+  max-width: 80%;
+  margin: 10px 0;
+  transition: transform 1s linear, opacity 1s linear !important;
+}
+
+.scaleplus {
+  transform: scale(var(--scale)) translate(var(--tx), var(--ty));
+  opacity: 1;
+}
+
+
+.scaleminus {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1100px) {
+  .scroller__content-porfolio {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .scroller__content-porfolio {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .scroller__content-porfolio {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .scroller__text__portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .scroller__content-porfolio {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .scroller__content h1 {
+    margin-top: -20%;
+  }
+}
+
+
+.dark .scroller__content-porfolio {
+    filter:
+    drop-shadow(0 0 3px rgba(0, 255, 255, 0.8))
+    drop-shadow(0 0 10px rgba(0, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(0, 255, 255, 0.6))
+    drop-shadow(0 0 40px rgba(0, 255, 255, 0.4));
+  animation: breatheStrong 8s ease-in-out infinite;
+}
+
+@keyframes breatheStrong {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 4px rgba(0, 255, 255, 0.6))
+      drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))
+      drop-shadow(0 0 20px rgba(0, 255, 255, 0.4))
+      drop-shadow(0 0 40px rgba(0, 255, 255, 0.2));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 10px rgba(0, 255, 255, 1))
+      drop-shadow(0 0 20px rgba(0, 255, 255, 0.9))
+      drop-shadow(0 0 40px rgba(0, 255, 255, 0.6))
+      drop-shadow(0 0 80px rgba(0, 255, 255, 0.4));
+  }
+}
+
+.dark .scroller__content h1 {
+  color: #f8faff;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.2),
+    0 0 16px rgba(255, 255, 255, 0.15);
+  animation: softGlow 8s ease-in-out infinite;
+  letter-spacing: 0.05em;
+  transition: all 3s ease;
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.3),
+      0 0 6px rgba(255, 255, 255, 0.2),
+      0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.5),
+      0 0 12px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
 
 </style>

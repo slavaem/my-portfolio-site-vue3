@@ -1,0 +1,3020 @@
+@media screen and (max-width: 1920px) {
+.swiper-block-nav button::-moz-focus-outer, ::-moz-focus-inner {
+    border: 0 !important;
+    padding: 0;
+	outline: 0 !important;
+}
+.swiper-block-nav button {
+    border: 0 !important;
+    padding: 0;
+	outline: 0 !important;
+}
+.main {
+  margin-top: 51px; 
+  height: max-content;
+}
+.main-swiper {
+  height: 879px;
+  width: 50%;
+  
+}	
+.swiper-slide:nth-child(even) p {
+  position: inherit;
+  
+}
+.swiper-container {
+  display: block;
+  height: 100%;
+  width: 60%;
+  margin-left: 60%;
+  margin-right: auto;  
+  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+} 
+.swiper-slide {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-basis: fit-content;
+  font-family: 'Poppins';
+} 
+.swiper-slide:nth-child(even) {
+  top: -2%;	
+}
+.swiper-slide p {
+  position: relative;
+  top: 4%;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #3D3D3D;
+
+} 
+.swiper-slide p:nth-child(2) {
+  padding-top: 8%;
+}
+.swiper-slide p:nth-child(4) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+/* or 140% */
+  text-align: center;
+  color: #3D3D3D;
+}
+.swiper-slide p:nth-child(5) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+/* or 150% */
+  text-align: center;
+  text-transform: uppercase;
+  color: #4137D0;
+}          
+.swiper-slide img {
+	max-width: 586px;
+	height: 584px;
+}
+.swiper-block-nav {
+  position: relative;
+  margin: 0 auto;
+  top: -10vh;
+  width: 129px;
+  height: 39px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #E9E9E9;
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 150px;
+  z-index: 100;
+}
+.swiper-button-prev:after {  
+  position: relative;
+  width: 4px;
+  height: 8px;
+  right: 30%;
+  content:url("data:image/svg+xml,%3Csvg  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 1L1 5L5 9' stroke='%234137D0' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+.swiper-button-next:after {
+  position: relative;
+  width: 4px;
+  height: 8px;
+  left: 30%;
+  content:url("data:image/svg+xml,%3Csvg  fill='none'  stroke-width='1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L1 9' stroke='%234137D0' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+.swiper-pagination-bullet {
+  width: 4px !important;
+  height: 4px !important;
+  vertical-align: middle !important;
+  margin-bottom: 2% !important;
+  background-color: #535353 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color:#4137D0 !important;
+}
+.swiper-pagination-bullet-active::before {
+    content: " ";
+    display: inline-block;
+	position: relative;
+	border: none;
+    border-radius: 50%;
+	transform: translate(-.9px, -8.45px);
+	outline: 1px solid #4137D0;
+    width: 6px;
+    height: 6px;   
+}
+.swiper-slide-like {
+	display: flex;
+    flex-direction: row;
+	gap: 10%;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+	width: 96px;
+    height: 50px;
+    left: -38%;
+	top: -82.5%;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 150px;
+}
+.like__count {
+	width: 25px;
+	height: 20px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 20px;
+/* identical to box height, or 100% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.like__heart {
+	height: 24px;
+	width: 26px;
+}
+.slide-like-btn {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+    left: 42%;
+	top: -88%;
+    z-index: 100;
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(3px);
+/* Note: backdrop-filter has minimal browser support */
+	cursor: pointer;
+}
+.like__btn {
+	height: 23px;
+	width: 26px;
+}
+.new-painting-block {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	margin-top: 1%;
+}
+.new-painting-text {	
+	width: 717px;
+	height: 61px;
+	margin-top: 66px; 
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 30px;
+	/* or 100% */
+	text-align: center;
+	color: #3D3D3D;
+}
+.new-painting-price {
+	width: 274px;
+	height: 23px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 28px;
+	/* or 70% */
+	text-align: center;
+	color: #3D3D3D;
+
+}
+.new-painting-button {
+	width: 216px;
+	height: 70px;
+	background: #4137D0;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 30px;
+	/* or 150% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-top: 43px; 
+}
+.new-painting {
+	width: 1750px;
+	height: 220px;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 200px;
+	line-height: 220px;
+	/* identical to box height, or 110% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+}
+.new-painting-block {
+	padding-top: 4%;	
+}
+.new-painting-image {
+	width: 1800px;
+	height: 1338px;
+}
+.main__text {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 32px;
+	word-wrap: break-word;
+	color: #7C6E6E;
+	padding-left: 6%;
+	padding-top: 2%;
+}
+.img__philosophy__two {
+	width: 553px;
+	border: 3px solid black;
+	border-radius: 100%;
+	float:right;
+	margin-top: -6%;
+	margin-right: 12%;
+	position: relative;
+	top: -1.5vw;
+}	
+.stroke {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 45px;
+	line-height: 35px;
+	color: #fff!important;
+	text-shadow: 1px 1px 1px #292929;
+	margin-top: 18vh;
+	padding-left: 6%;
+}
+.philosophy__block {
+	position: relative;
+	margin-top: 7vh;
+}
+.philosophy {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 200px;
+	line-height: 220px;
+	/* identical to box height, or 110% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727!important;
+	margin-left: -28%;
+}
+.img__philosophy__one {
+	width: 553px;	
+	float:left;
+	margin: 1%;
+	margin-top: -3%;
+	margin-left: 3%;
+	position: relative;
+}
+.img__philosophy__group__1920 {
+	margin-top: -70vh;
+}
+.img__philosophy__group__768 {
+	display: none;
+}
+.img__philosophy__group__360 {
+	display: none;
+}
+.philosophy__block__article__one {
+	margin-top: 0;
+	position:relative;
+}
+.philosophy__block__article__two {
+	margin-top: 0;
+	position:relative;
+}
+.block__nft__marketplace {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 100;
+	top: -160vh;
+	left: 3%;
+}
+.nft {
+	flex: 1;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 200px;
+	line-height: 210px;
+	/* or 105% */
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.nft__marketplace {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 200px;
+	line-height: 210px;
+	/* or 105% */
+	text-transform: uppercase;
+	color:#FFFFFF;
+	flex: auto;
+}
+.nft__cryptos {
+	flex: 3;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 32px;
+	/* or 160% */
+	color: #FFFFFF;
+	padding-top: 5%;
+	padding-right: 21.5%;
+	padding-left: 2%;
+}
+.swiper2 {
+	position: relative;
+	z-index: 100;
+	height: auto;
+	width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: -49%;
+	top: 0;
+	padding-bottom: 10%;
+}
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	gap: 3.5vw;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 6%;
+	left: -13%;
+	scroll-snap-type: x mandatory;
+	-ms-scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scroll-snap-align: center;
+}
+.swiper2 img {
+	width: 236px;
+	height: auto;
+
+}
+.swiper__block__nav__swiper2 {
+	position: relative;
+	top: 5vh;
+	left: -0.5%;
+	z-index: 200;
+}
+.swiper2 .swiper-pagination-bullet-active::before {
+	transform: translate(-1.1px, -8.4px) !important;
+}
+.nft__cryptos__768 {
+	display: none;
+}
+.exhibitions__text {
+	width: 1461px;
+	height: 210px;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 200px;
+	line-height: 210px;
+	/* identical to box height, or 105% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+	margin: 0 auto;
+}
+.exhibitions__block {
+	margin: 0 auto;
+	width: 1802px;
+	height: 1131px;
+	margin-top: 5vh;
+}
+.exhibitions__slider {
+	width: 100%;
+	height: 84%;
+	padding-top: 7vh;
+	position: relative;
+	overflow: visible;
+}
+.slider-nav {
+  display: flex;
+  position: relative !important;
+  left: 3vw;
+  transform: translateX(-50%);
+  width: 129px;
+  height: 39px;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid #E9E9E9;
+  backdrop-filter: blur(2px) !important;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 150px;
+  z-index: 1000;
+  top: -12vh;
+  margin: 0 auto;
+}
+.exhibitions__slider__slide__image {
+	max-width: 587px;
+	max-height: 587px;
+	background: #C4C4C4;
+    border: 3px solid #424242;
+}
+.exhibitions__slider__slide__image img {
+	width: 100%;
+	height: auto;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 35px;
+	/* or 140% */
+	text-transform: uppercase;
+	color: #000000;
+	text-align: start;
+	word-wrap: break-word;
+	padding: 0;
+	margin: 0;
+}
+.exhibitions__slider figcaption {
+	padding-top: 2vh;
+	padding-left: .1%;
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 35px;
+	/* or 140% */
+	color: #000000;
+	text-align: start;
+	word-wrap: break-word;
+	padding: 0;
+	margin: 0;
+}
+.exhibitions__slider details > summary {
+	font-family: 'Poppins' !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	font-size: 20px !important;
+	line-height: 30px !important;
+	/* identical to box height, or 150% */
+	text-transform: uppercase !important;
+	color: #4137D0 !important;
+	text-align: start !important;
+	word-wrap: break-word !important;
+	padding-top: 2vh !important;
+	list-style: none;
+}
+.arrow-left::after {
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  content: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 1L1 5L5 9' stroke='%234137D0' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  transform: translate(8px, 14px);
+  cursor: pointer;
+}
+.arrow-right::after {
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  content: url("data:image/svg+xml,%3Csvg fill='none' stroke-width='1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L1 9' stroke='%234137D0' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  transform: translate(113px, 14px);
+  cursor: pointer;
+}
+  
+.slider-dots {
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(26px, 17px);
+}
+.slick-dots {
+  display: flex;
+  gap: .5vw;
+  }
+.slick-dots button {
+  font-size: 0;
+  visibility: hidden; 
+  }
+.slick-dots li.slick-active {
+	background-color:#4137D0 !important;
+  }
+.slick-dots li {
+	width: 4px !important;
+	height: 4px !important;
+	vertical-align: middle !important;
+	margin-bottom: 2% !important;
+	background-color: #535353 !important;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slick-dots li.slick-active::before {
+    content: " ";
+    display: inline-block;
+	position: relative;
+	border: none;
+    border-radius: 50%;
+	outline: 1px solid #4137D0;
+    width: 6px;
+    height: 6px; 
+	transform: translateX(-0.9px);
+	top: -8.3px;
+}
+.social-block {
+	display: flex;
+	gap: 1%;
+	align-items: center;
+    justify-content: stretch;
+	width: 34.22vw;
+	height: 4.17vw;
+	margin-left: 2.6vw;
+	background: #4137D0;
+	border-radius: 150px;
+	margin-top: 6vh;
+}
+.social-block a {
+	text-decoration: none;
+	padding-left: 0.4vw;
+}
+.social__block__socialicon {
+	width: 3.65vw;
+	height: 3.65vw;
+	background: #FFFFFF;
+	border-radius: 50%;
+	margin-left: 6px;
+	display: grid;
+    place-items: center;
+}
+.social__block__text {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 16px;
+	/* identical to box height, or 80% */
+	text-align: center;
+	text-decoration-line: underline;
+	color: #FFFFFF;
+}
+.social__block__socialmedia {
+	width: 2.6vw;
+	height: 2.6vw;
+	background: #FFFFFF;
+	box-shadow: 0px 8px 15px #2117A5;
+	backdrop-filter: blur(2px);
+	border-radius: 50%;
+	display: grid;
+    place-items: center;
+}
+
+.block__socialicon__socialicon {
+	width: 2.245vw;
+	height: 1.904vw;
+}
+.block__socialicon__socialfecebook {
+	width: 0.623vw;
+	height: 1.245vw;
+}
+.block__socialicon__socialtiktok {
+	width: 0.993vw;
+	height: 1.131vw;
+}
+.block__socialicon__socialinsta {
+	width: 1.132vw;
+	height: 1.132vw;
+}
+.block__socialicon__youtube {
+	width: 1.379vw;
+	height: 0.966vw;
+}
+}
+@media screen and (max-width: 1910px) {
+.new-painting {
+	font-size: calc(100vw/10); 
+}
+.new-painting-text {
+	font-size: calc(100vw/50);	
+}
+.new-painting-price {
+	font-size: calc(100vw/45);	
+}
+.new-painting-button {
+	font-size: calc(100vw/75);
+	width: 10vw;
+	height: 10vh;	
+}
+.new-painting-image {
+	width: 95%;
+	height: auto;
+}
+.philosophy {
+	font-size: calc(100vw/10); 
+}
+.img__philosophy__group__1920 {
+  margin-top: -23vw;
+}
+.stroke {
+	font-size: calc(100vw/40);
+	margin-top: 5vh;
+}
+
+.main__text {
+	font-size: calc(100vw/90);
+	padding: 1%;
+	padding-left: 5%;
+}
+.img__philosophy__one {
+	width: 25%;
+	height: auto;
+	margin-top: 0;
+	padding: 1%;
+}
+.img__philosophy__two {
+	width: 25%;
+	height: auto;
+	margin-top: -2%;
+	margin-left: 0;
+}
+.block__nft__marketplace {
+    margin-top: 0;
+    top: -51vw;
+}
+}
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos {
+	font-size: calc(100vw/90);
+}
+.swiper2 {
+	margin-top: 0;
+	top: -48vw;
+}
+.exhibitions__block {
+	top: -52vw;
+	position: relative;
+	width: 94%;
+	height: auto;
+	margin: 0 auto;
+    padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+.exhibitions__text {
+	font-size: calc(100vw/10); 
+}
+.slider-nav {
+  top: 2vh;
+}
+.exhibitions__block {
+	width: 94vw;
+	height: auto;
+	margin-top: 5vh;
+}
+.exhibitions__slider__slide__image {
+	width: 30.5vw;
+	height: 30.5vw;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-size: calc(100vw/75);
+	line-height: calc(100vw/50); 
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-size: calc(100vw/75);
+	line-height: calc(100vw/50); 
+}
+.exhibitions__slider details > summary {
+	font-size: calc(100vw/80)  !important;
+	line-height: calc(100vw/55) !important;
+}
+.slick-dots {
+	display: flex;
+	gap: .6vw;
+  }
+.social-block {
+	top: -48vw;
+	position: relative;
+}
+.social-block :nth-child(6) {
+	margin-right: .2vw;
+}
+.social__block__text {
+	font-size: calc(100vw/95);
+	line-height: calc(100vw/55);
+}
+.social__block__socialicon {
+	margin-left: .2vw;
+}
+}
+@media screen and (max-width: 1880px) {
+.swiper-wrapper {
+	gap: 3.3vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1840px) {
+.swiper-wrapper {
+	gap: 3.1vw;
+	padding-left: 0;
+	left: 7.5vw;
+}
+}
+@media screen and (max-width: 1810px) {
+.swiper-wrapper {
+	gap: 2.7vw;
+	padding-left: 0;
+	left: 10.5vw;
+}
+}
+@media screen and (max-width: 1790px) {
+.swiper-wrapper {
+	gap: 2.5vw;
+	padding-left: 0;
+	left: 9.5vw;
+}
+.social-block {
+  width: 35vw;
+}
+}
+@media screen and (max-width: 1760px) {
+.swiper-wrapper {
+	gap: 2.4vw;
+	padding-left: 0;
+	left: 9.5vw;
+}
+}
+@media screen and (max-width: 1740px) {
+.swiper-wrapper {
+	gap: 2.2vw;
+	padding-left: 0;
+	left: 9.5vw;
+}
+}
+@media screen and (max-width: 1720px) {
+.swiper-wrapper {
+	gap: 2vw;
+	padding-left: 0;
+	left: 9.5vw;
+}
+}
+@media screen and (max-width: 1690px) {
+.swiper2 img {
+	width: 216px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 9vw;
+}
+}
+@media screen and (max-width: 1660px) {
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 9vw;
+}
+}
+@media screen and (max-width: 1640px) {
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 9vw;
+}
+}
+@media screen and (max-width: 1620px) {
+.swiper-wrapper {
+	gap: 2.4vw;
+	padding-left: 0;
+	left: 9.5vw;
+}
+}
+@media screen and (max-width: 1600px) {
+.img__philosophy__group__1920 {
+	  margin-top: -22vw;
+}
+}
+@media screen and (max-width: 1590px) {
+.swiper2 img {
+	width: 206px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1570px) {
+.swiper2 img {
+	width: 206px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1550px) {
+.swiper2 img {
+	width: 206px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1530px) {
+.swiper2 img {
+	width: 206px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.3vw;
+	padding-left: 0;
+	left: 8.5vw;
+}
+}
+@media screen and (max-width: 1500px) {
+.img__philosophy__group__1920 {
+	margin-top: -21vw;
+}
+.swiper2 img {
+	width: 196px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 7.5vw;
+}
+}
+@media screen and (max-width: 1490px) {
+.swiper2 img {
+	width: 196px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1470px) {
+.swiper2 img {
+	width: 196px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 7.5vw;
+}
+}
+@media screen and (max-width: 1450px) {
+.swiper2 img {
+	width: 196px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.4vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1430px) {
+.swiper2 img {
+	width: 196px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.2vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1400px) {
+.main__text {
+	font-size: calc(100vw/80);
+}
+.img__philosophy__group__1920 {
+	margin-top: -19vw;
+}
+.img__philosophy__two {
+	margin-top: -3%;
+	margin-right: 8%;
+}	
+.nft__cryptos {
+	padding-top: 5%;
+	padding-right: 10%;
+	padding-left: 5%;
+	font-size: calc(100vw/80);
+}
+.swiper2 img {
+	width: 185px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 7.3vw;
+}
+.slick-dots {
+  display: flex;
+  gap: .7vw;
+}
+.social-block {
+	width: 46vw;
+	height: 6vw;
+}
+.social__block__socialicon {
+  width: 5vw;
+  height: 5vw;
+}
+.social__block__text {
+	font-size: calc(100vw/70);
+	line-height: calc(100vw/55);
+}
+.social__block__socialmedia {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+.social-block a {
+	padding-left: 0.3vw;
+}
+}
+@media screen and (max-width: 1390px) {	
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1370px) {	
+.swiper-wrapper {
+	gap: 2.4vw;
+	padding-left: 0;
+	left: 8vw;
+}
+}
+@media screen and (max-width: 1350px) {	
+.swiper-wrapper {
+	gap: 2.2vw;
+	padding-left: 0;
+	left: 7.6vw;
+}
+.social__block__text {
+	font-size: calc(100vw/75);
+	line-height: calc(100vw/55);
+}
+}
+@media screen and (max-width: 1330px) {	
+.swiper-wrapper {
+	gap: 2vw;
+	padding-left: 0;
+	left: 7.6vw;
+}
+}
+@media screen and (max-width: 1310px) {
+.swiper2 img {
+	width: 200px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 4vw;
+}
+.block__nft__marketplace {
+	margin-top: 0;
+	top: -103vh;
+}
+.exhibitions__slider {
+	padding-top: 0;
+}
+}
+@media screen and (max-width: 1290px) {
+.swiper2 img {
+	width: 200px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1270px) {
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1250px) {
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 1vw;
+}
+.nft__marketplace {
+  margin-top: -3vw;
+}
+}
+@media screen and (max-width: 1230px) {
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 1vw;
+}
+.block__nft__marketplace {
+	margin-top: 0;
+	top: -51vw;
+}
+.swiper2 {
+	margin-top: 0;
+	top: -52vw;
+}
+.exhibitions__block {
+    top: -62vw;
+    margin: 0 auto;
+}
+.social-block {
+  top: -55vw;
+}
+}
+@media screen and (max-width: 1200px) {
+.img__philosophy__one {
+	width: 30%;
+	height: auto;
+	margin-top: 0;
+	padding: 1%;
+}
+.img__philosophy__two {
+	width: 30%;
+	height: auto;
+	margin-top: 0;
+	margin-left: 0;
+}
+.swiper2 img {
+	width: 185px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1170px) {
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1150px) {
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1130px) {
+.swiper-wrapper {
+	gap: 2.4vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1100px) {
+
+.new-painting-text {
+font-size: calc(100vw/40);	
+}
+.new-painting-price {
+font-size: calc(100vw/35);	
+}
+.new-painting-button {
+font-size: calc(100vw/60);	
+width: 15vw;
+height: 8vh;	
+}
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 1vw;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-size: calc(100vw/65);
+	line-height: calc(100vw/40); 
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-size: calc(100vw/65);
+	line-height: calc(100vw/40); 
+}
+.exhibitions__slider details > summary {
+	font-size: calc(100vw/75) !important;
+	line-height: calc(100vw/55) !important;
+}
+.slick-dots {
+  display: flex;
+  gap: 1vw;
+  }
+}
+@media screen and (max-width: 1080px) {
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1060px) {
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1040px) {
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1020px) {
+.swiper-wrapper {
+	gap: 2.5vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 1000px) {
+.swiper2 img {
+	width: 155px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 1vw;
+}
+.nft__cryptos {
+  font-size: calc(100vw/60);
+}
+.nft__marketplace {
+  margin-top: -5vw;
+}
+}
+@media screen and (max-width: 980px) {
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 950px) {
+
+.new-painting-text {
+font-size: calc(100vw/30);	
+}
+.new-painting-price {
+font-size: calc(100vw/25);	
+}
+.new-painting-button {
+font-size: calc(100vw/50);	
+width: 10vw;
+height: 8vh;	
+}
+.philosophy__block {
+	margin-top: 0;
+	padding-top: 0;
+}
+.philosophy {
+	margin-bottom: 0;
+	padding-bottom: 3%;
+	font-size: calc(100vw/10); 
+}
+.stroke {
+	font-size: calc(100vw/35);
+	margin-top: 5vh;
+}
+
+.main__text {
+	font-size: calc(100vw/60);
+	padding: 1%;
+	padding-left: 5%;
+	margin-right: 5%;
+}
+.img__philosophy__group__1920 {
+	margin-top: -18vw;
+}
+.img__philosophy__one {
+	width: 35%;
+	height: auto;
+	margin-top: 0;
+	padding: 1%;
+}
+.img__philosophy__two {
+	width: 35%;
+	height: auto;
+	margin-top: 0;
+	margin-left: 0;
+}
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 930px) {
+.swiper-wrapper {
+	gap: 2.3vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 910px) {
+.swiper-wrapper {
+	gap: 2vw;
+	padding-left: 0;
+	left: 1vw;
+}
+}
+@media screen and (max-width: 900px) {
+.swiper2 img {
+	width: 185px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.5vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+.slick-dots {
+  display: flex;
+  gap: 1.2vw;
+  }
+.social-block {
+	width: 46vw;
+	height: 6vw;
+}
+.social__block__text {
+	font-size: calc(100vw/70);
+	line-height: calc(100vw/55);
+}
+}
+@media screen and (max-width: 890px) {
+.swiper2 img {
+	width: 180px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.4vw;
+	padding-left: 0;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 870px) {
+.swiper2 img {
+	width: 180px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 850px) {
+.swiper2 img {
+	width: 180px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 12vw;
+}
+}
+@media screen and (max-width: 830px) {
+.swiper2 img {
+	width: 180px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2vw;
+	padding-left: 0;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 820px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3.2vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+}
+@media screen and (max-width: 810px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 3vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+}
+@media screen and (max-width: 800px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.8vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+.social__block__text {
+	font-size: calc(100vw/65);
+	line-height: calc(100vw/55);
+}
+.social-block {
+	width: 47vw;
+	height: 6vw;
+}
+}
+@media screen and (max-width: 790px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.6vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+}
+@media screen and (max-width: 780px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 2.2vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+}
+@media screen and (max-width: 770px) {
+.swiper2 img {
+	width: 170px;
+	height: auto;
+}	
+.swiper-wrapper {
+	gap: 1.8vw;
+	padding-left: 0;
+	left: 11.5vw;
+}
+}
+@media screen and (max-width: 768px) {
+.main-swiper { 
+   height: 543.02px;
+   position: relative;
+   top: -9vh;
+}
+.swiper-slide img {
+  height: 388.15px;
+}	
+.swiper-slide p {
+  top: 0;
+} 
+.swiper-container {
+  width: 58%;
+} 
+.swiper-slide:nth-child(even) {
+  margin-top: 13%;
+} 
+
+.swiper-block-nav {
+  left: 25%;
+  top: -10vh;
+}
+.swiper-slide p:nth-child(5) {
+  display: none;
+}  
+.swiper-button-prev:after {  
+  transform: scale(1.4);
+  }
+.swiper-button-next:after {
+  transform: scale(1.4);
+  } 
+.swiper-slide-like {
+    left: -28%;
+	top: -88%;
+} 
+.slide-like-btn {
+    left: 38%;
+	top: -98%;
+} 
+.new-painting {
+	width: 728px;
+	height: 85px;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 85px;
+	/* identical to box height, or 100% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+}
+.new-painting-text {
+	width: 728px;
+	height: 17px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 14px;
+	/* or 100% */
+	text-align: center;
+	color: #3D3D3D;	
+}
+.new-painting-price {
+	width: 728px;
+	height: 23px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 28px;
+	/* or 112% */
+	text-align: center;
+	color: #3D3D3D;	
+}
+.new-painting-button {
+	width: 134px;
+	height: 50px;
+	background: #4137D0;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	/* or 111% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;	
+}
+.new-painting-image {
+	width: 722.05px;
+	height: 536.73px;
+	padding-top: 4%;
+}
+.new-painting-block {
+	padding-top: 8%;	
+}
+
+.img__philosophy__one {
+	width: 32%;
+	height: auto;
+	position: relative;
+	top: -7vh;
+	left: -1vw;
+	margin-right: 0;
+	shape-outside: inset(0 -50px 50px 0);
+}
+.img__philosophy__two {
+	width: 30%;
+	height: auto;
+	position: relative;
+	margin-right: 3%;
+	margin-left: 3%;
+	left: -3vw;
+}
+.philosophy {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 85px;
+	/* identical to box height, or 100% */
+	text-transform: uppercase;
+	color: #272727;
+	text-align: start;
+	margin-left: 2%;
+}
+
+.stroke {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 35px;
+	color: #fff!important;
+	text-shadow: 1px 1px 1px #292929;
+	margin-top: 8vh;
+}
+.main__text {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	padding-left: 4%;
+	
+}
+.decomposed {
+	margin-left: -3%;
+}
+.abstract {
+	position: relative;
+	left: -3%;
+}
+.philosophy__block {
+    margin-top: 6vh;
+}
+.img__philosophy__group__1920 {
+	display: none;
+}
+.img__philosophy__group__768 {
+	display: inline-block;
+	margin-top: -25vw;
+}
+.philosophy__block__article__one {
+	margin-top: -3vh;
+	padding-left: 0;
+	margin-left: 0;
+}
+.philosophy__block__article__two {
+	margin-top: -3vh;
+	padding-left: 0;
+	margin-left: 0;
+
+}
+
+.block__nft__marketplace {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	left: 2%;
+	margin-top: 4vh;
+}
+.nft {
+	position: relative;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 85px;
+	flex: 1;
+	order: 1;
+	padding-top: 0;
+	padding-bottom: 0;
+	top: -34.5vw;
+}
+.nft__marketplace {
+	position: relative;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 85px;
+	flex: 1;
+	order: 2;
+	padding-top: 0;
+	padding-bottom: 0;
+	top: -26.5vw;
+}
+.nft__cryptos {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 22px;
+	/* or 157% */
+	flex: 1;
+	order: 3;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: -4%;
+}
+.swiper2 {
+	height: auto;
+	width: 100vw;
+	top: -98.2vw
+	
+}
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 6vw;
+	width: 100%;
+	padding: 23%;
+	left: -9vw;
+}
+.swiper2 img {
+	width: 147.63px;
+	height: auto;
+
+}
+.swiper__slide__swiper2:nth-child(even) {
+  margin-top: 0;
+} 
+.swiper__block__nav__swiper2 {
+	position: relative;
+	top: -23vh;
+	left: -1%;
+	
+}
+.nft__cryptos__768 {
+	display: inline;
+	padding-right: 5%;
+	padding-left: 4%;
+	top: -25vw;
+	position: relative;
+}
+.nft__cryptos__1920 {
+	display: none;
+	
+}
+.exhibitions__text {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 85px;
+	line-height: 85px;
+	/* identical to box height, or 100% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+}
+.exhibitions__block {
+	width: 730px;
+	height: 670px;
+	top: -110vw;
+}
+.exhibitions__slider {
+	top: -16vh;
+}
+.exhibitions__slider__item {
+	padding: 0 1vw;
+}
+.exhibitions__slider__slide__image {
+	width: 45.3vw;
+	height: 45.3vw;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-weight: 400 !important;
+	font-size: 16px !important;
+	line-height: 26px !important;
+	text-align: justify !important;
+	word-spacing: -1px;
+}
+.exhibitions__slider details > summary {
+	font-weight: 600 !important;
+	font-size: 18px !important;
+	line-height: 30px !important;
+	position: relative;
+	top: -1.5vh;
+}
+.slider-nav {
+	top: -14vh;
+	left: 8vw;
+}
+.slider-dots {
+  transform: translate(50px, 17px);
+}
+ .exhibitions__slider__item br {
+    display: none;
+  }
+.social-block {
+	gap: 1%;
+	width: 85.026vw;
+	height: 10.416vw;
+	margin-left: 0;
+	margin-top: 0;
+	margin: 0 auto;
+	top: -105vw;
+}
+.social-block a {
+	text-decoration: none;
+	padding-left: 0.4vw;
+}
+.social__block__socialicon {
+	width: 9.114vw;
+	height: 9.114vw;
+	margin-left: 0.8vh;
+}
+.social__block__text {
+	font-size: 20px;
+	line-height: 16px;
+	margin-left: 1vw;
+}
+.social__block__socialmedia {
+	width: 6.51vw;
+	height: 6.51vw;
+}
+
+.block__socialicon__socialicon {
+	width: 5.614vw;
+	height: 4.76vw;
+}
+.block__socialicon__socialfecebook {
+	width: 1.557vw;
+	height: 3.113vw;
+}
+.block__socialicon__socialtiktok {
+	width: 2.483vw;
+	height: 2.827vw;
+}
+.block__socialicon__socialinsta {
+	width: 2.83vw;
+	height: 2.83vw;
+}
+.block__socialicon__youtube {
+	width: 3.449vw;
+	height: 2.415vw;
+}
+}	
+@media screen and (max-width: 760px) {
+.new-painting {
+	font-size: calc(100vw/10); 
+	
+}
+.new-painting-text {
+	font-size: calc(100vw/40);	
+}
+.new-painting-price {
+	font-size: calc(100vw/35);	
+}
+.new-painting-button {
+	font-size: calc(100vw/35);	
+}
+.new-painting-image {
+	width: 95%;
+	height: auto;
+}
+.philosophy__block {
+	margin-top: 1%;
+	padding-top: 0;
+}
+.philosophy {
+	margin-bottom: 0;
+	padding-bottom: 3%;
+	padding-left: 3%;
+	font-size: calc(100vw/10); 
+}
+.stroke {
+	font-size: calc(100vw/25);
+	margin-top: 3vh;
+	padding: 1%;
+	margin-left: 4%;
+}
+
+.main__text {
+	font-size: calc(100vw/50);
+	padding-left: 5%;
+}
+.philosophy__block__article__two .main__text {
+	margin-right: 8%;
+}
+.philosophy__block__article__one {
+	margin-top: 0;
+}
+.philosophy__block__article__two {
+	margin-top: 0;
+}
+.img__philosophy__one {
+	width: 30%;
+	height: auto;
+	top: 0;
+}
+
+.img__philosophy__two {
+	width: 30%;
+	height: auto;
+}
+.abstract {
+	left: 0;
+}
+.img__philosophy__group__768 {
+	margin-top: -26.5vw;
+}
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 5.5vw;
+	width: 100%;
+	padding: 23%;
+	left: -9vw;
+}
+.exhibitions__text {
+	font-size: calc(100vw/10); 
+}
+.exhibitions__block {
+	width: 96%;
+	height: auto;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-size: calc(100vw/40) !important;
+	line-height: calc(100vw/30) !important; 
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-size: calc(100vw/50) !important;
+	line-height: calc(100vw/40) !important; 
+}
+.exhibitions__slider details > summary {
+	font-size: calc(100vw/55)  !important;
+	line-height: calc(100vw/55) !important;
+	top: 0;
+}
+.slider-nav {
+	left: 50vw;
+	transform: translateX(-50vw);
+}
+.social-block {
+  top: -115vw;
+}
+.social__block__text {
+	font-size: calc(100vw/40);
+	line-height: calc(100vw/55);
+}
+.swiper__block__nav__swiper2 {
+	top: -20vw;
+	
+}
+}
+@media screen and (max-width: 740px) {
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 5vw;
+	width: 100%;
+	padding: 23%;
+	left: -9vw;
+}
+.swiper2 img {
+	width: 147.63px;
+	height: auto;
+
+}
+}
+@media screen and (max-width: 720px) {
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 4.2vw;
+	width: 100%;
+	padding: 23%;
+	left: -7vw;
+}
+.swiper2 img {
+	width: 147.63px;
+	height: auto;
+}
+}
+@media screen and (max-width: 700px) {
+.img__philosophy__one {
+	shape-outside: none;
+}
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 4vw;
+	width: 100%;
+	padding: 23%;
+	left: -9vw;
+}
+.swiper2 img {
+	width: 147.63px;
+	height: auto;
+
+}
+}
+@media screen and (max-width: 690px) {
+.swiper-wrapper {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 5vw;
+	width: 100%;
+	padding: 23%;
+	left: -9.5vw;
+}
+.swiper2 img {
+	width: 140px;
+	height: auto;
+
+}
+}
+@media screen and (max-width: 680px) {
+.swiper-wrapper {
+	gap: 4.3vw;
+	left: -9vw;
+}
+}
+@media screen and (max-width: 660px) {
+.swiper-wrapper {
+	gap: 3.8vw;
+	left: -9vw;
+}
+}
+@media screen and (max-width: 650px) {
+
+.new-painting-text {
+	font-size: calc(100vw/35);	
+}
+.new-painting-price {
+	font-size: calc(100vw/25);	
+}
+.new-painting-button {
+	font-size: calc(100vw/35);	
+	width: 20vmin;
+	height: 6vmax;	
+}
+.main__text {
+	font-size: calc(100vw/45);
+	padding-left: 5%;
+}
+.swiper-wrapper {
+	gap: 3.8vw;
+	left: -10vw;
+}
+.nft__cryptos__768 {
+	top: -20vw;
+}
+.swiper2 {
+	top: -90vw;
+}
+}
+@media screen and (max-width: 640px) {
+.swiper-wrapper {
+	gap: 2.8vw;
+	left: -6.5vw;
+}
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/50);
+}
+}
+@media screen and (max-width: 630px) {
+.swiper-wrapper {
+	gap: 2.4vw;
+	left: -7vw;
+}
+}
+@media screen and (max-width: 620px) {
+.swiper-wrapper {
+	gap: 2.3vw;
+	left: -9vw;
+}
+}
+@media screen and (max-width: 610px) {
+.swiper-wrapper {
+	gap: 2vw;
+	left: -9vw;
+}
+}
+@media screen and (max-width: 600px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 6vw;
+	left: 16.5vw;
+}
+
+.exhibitions__slider figcaption :nth-child(1) {
+	font-size: calc(100vw/35) !important;
+	line-height: calc(100vw/30) !important; 
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-size: calc(100vw/40) !important;
+	line-height: calc(100vw/40) !important; 
+}
+.exhibitions__block {
+	margin-top: -5vw;
+}
+.nft__cryptos__768 {
+  font-size: calc(100vw/35);
+  top: -25vw;
+}
+.nft__marketplace {
+  top: -28vw;
+}
+}
+@media screen and (max-width: 590px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 6vw;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 570px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 5vw;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 550px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 4vw;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 540px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3.5vw;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 530px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3vw;
+	left: 13.5vw;
+}
+}
+@media screen and (max-width: 520px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 2.5vw;
+	left: 12vw;
+}
+}
+@media screen and (max-width: 510px) {
+.swiper2 img {
+	width: 160px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 2vw;
+	left: 11vw;
+}
+}
+@media screen and (max-width: 500px) {
+.main__text {
+	font-size: calc(100vw/40);
+	
+}
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 5vw;
+	left: 14vw;
+}
+}
+@media screen and (max-width: 490px) {
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 4.5vw;
+	left: 14vw;
+}
+}
+@media screen and (max-width: 480px) {
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 4vw;
+	left: 14vw;
+}
+}
+@media screen and (max-width: 470px) {
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3.5vw;
+	left: 13vw;
+}
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/40);
+}
+}
+@media screen and (max-width: 460px) {
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3vw;
+	left: 11vw;
+}
+}
+@media screen and (max-width: 450px) {
+.swiper2 img {
+	width: 135px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 2.5vw;
+	left: 14vw;
+}
+}
+@media screen and (max-width: 440px) {
+.swiper2 img {
+	width: 135px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 2vw;
+	left: 14vw;
+}
+.nft {
+	font-size: calc(100vw/10);
+}
+}
+@media screen and (max-width: 430px) {
+.swiper2 img {
+	width: 130px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3vw;
+	left: 12vw;
+}
+}
+@media screen and (max-width: 425px) {
+.main-swiper {
+	top: 0;
+}
+.swiper-block-nav {
+    margin-top: 8vw;
+}
+
+.new-painting-block {
+    margin-top: 4vw;
+}
+.img__philosophy__group__768 {
+
+	margin-top: -28vw;
+}
+.block__nft__marketplace {
+	top: -98vw;
+}
+.nft__cryptos__768 {
+	top: -7vw;
+}
+.nft {
+	top: 0;
+}
+.nft__marketplace {
+	top: -3vw;
+}
+.swiper2 {
+   top: -125vw;
+}
+.swiper__block__nav__swiper2 {
+   top: -22vw;
+}
+.exhibitions__block {
+   margin-top: 0;
+   top: -155vw;
+}
+.social-block {
+    margin: 0 auto;
+    margin-top: 0;
+    position: relative;
+    top: -180vw;
+	gap: 0;
+	width: 92.5vw;
+	height: 19.444vw;
+	margin-bottom: 0;
+}
+.social-block a {
+	text-decoration: none;
+	padding-left: 0;
+}
+.social__block__socialicon {
+	width: 15.277vw;
+	height: 15.277vw;
+	margin-left: 1.4vw;
+	margin-right: 2vw;
+}
+.social__block__text {
+	font-size: 16px;
+	line-height: 16px;
+	margin-left: 0;
+}
+.social__block__socialmedia {
+	width: 13.888vw;
+	height: 13.888vw;
+	background: #FFFFFF;
+	box-shadow: 0px 8px 15px #C9C9C9;
+}
+.block__socialicon__socialicon {
+	width: 9.411vw;
+	height: 7.98vw;
+}
+.block__socialicon__socialfecebook {
+	width: 3.322vw;
+	height: 6.641vw;
+}
+.block__socialicon__socialtiktok {
+	width: 5.297vw;
+	height: 6.03vw;
+}
+.block__socialicon__socialinsta {
+	width: 6.038vw;
+	height: 6.038vw;
+}
+.block__socialicon__youtube {
+	width: 7.358vw;
+	height: 5.153vw;
+}
+.socialmedia__link__fecebook {
+	position: relative;
+	top: 11vh;
+	left: -64vw;
+}
+.socialmedia__link__tiktok {
+	position: relative;
+	top: 11vh;
+	left: -61vw;
+}
+.socialmedia__link__insta {
+	position: relative;
+	top: 11vh;
+	left: -58vw;
+}
+.socialmedia__link__youtube {
+	position: relative;
+	top: 11vh;
+	left: -55vw;
+}
+.wrapper-swiper2 {
+    left: 10vw !important;
+}
+.swiper1 .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 30px;
+    left: -50px;
+}
+.swiper1 .swiper-button-prev:after {  
+  right: 17px;
+  top: 7px;
+  position: absolute;
+}
+.swiper1 .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.swiper1 .swiper-button-next:after {  
+  left: 15px;
+  top: 9px;
+  position: absolute;
+}
+.swiper2 .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 30px;
+    left: -50px;
+}
+.swiper2 .swiper-button-prev:after {  
+  right: 17px;
+  top: 7px;
+  position: absolute;
+}
+.swiper2 .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.swiper2 .swiper-button-next:after {  
+  left: 15px;
+  top: 9px;
+  position: absolute;
+}
+}
+@media screen and (max-width: 420px) {
+.swiper2 img {
+	width: 125px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3.5vw;
+	left: 13vw;
+}
+}
+@media screen and (max-width: 410px) {
+.swiper2 img {
+	width: 125px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 3vw;
+	left: 11vw;
+}
+.nft {
+	top: 5vh;
+	font-size: calc(100vw/10);
+}
+}
+@media screen and (max-width: 400px) {
+
+.main__text {
+	font-size: calc(100vw/35);
+	
+}
+.stroke {
+	font-size: calc(100vw/25);
+	margin-top: 1vh;
+}
+.img__philosophy__one {
+	width: 35%;
+	height: auto;
+}
+.img__philosophy__two {
+	width: 35%;
+	height: auto;
+}
+.img__philosophy__group__768 {	
+	margin-top: -28vw;
+}
+.nft {
+	top: 0;
+	font-size: calc(100vw/15);
+}   
+.nft__marketplace {
+	top: -7vw;
+	font-size: calc(100vw/15);
+}
+.nft__cryptos__768 {
+	top: -13vw;
+	font-size: calc(100vw/40);
+}
+.swiper2 {
+  top: -132vw;
+}
+.swiper__block__nav__swiper2 {
+	top: -15vh;	
+	transform: scale(0.8);
+}
+.swiper2 img {
+	width: 110px;
+	height: auto;
+}
+.swiper-wrapper {
+	gap: 6vw;
+	left: -21vw;
+}
+.exhibitions__block {
+   margin-top: 0;
+   top: -165vw;
+}
+}
+@media screen and (max-width: 390px) {
+.swiper-wrapper {
+	gap: 5vw;
+	left: -21vw;
+}
+}
+@media screen and (max-width: 380px) {
+.swiper-wrapper {
+	gap: 4.5vw;
+	left: -21vw;
+}
+}
+@media screen and (max-width: 370px) {
+.swiper-wrapper {
+	gap: 4vw;
+	left: -24vw;
+}
+}
+@media screen and (max-width: 360px) {
+.main-swiper { 
+	position: relative;
+	top: -5.5vh;
+	margin-top:20%;
+	width: 50%;
+	height: 288px;
+}	
+.swiper-slide img {
+	height: 202.3px;
+}	
+.swiper-container {
+	width: 90%;
+} 
+.wrapper-swiper2 {
+	gap: 3.6vw;
+	left: 5.5vw !important;
+} 		
+.swiper-slide p {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 22px;
+	/* or 157% */
+	text-align: center;
+	color: #3D3D3D;
+} 
+.swiper-slide p:nth-child(4) {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	/* or 156% */
+	text-align: center;
+	color: #3D3D3D;
+}
+.swiper-block-nav {
+	position: relative;
+	top: -2vh;
+	left: -5%;
+	width: 129px;
+	height: 39px;
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid #E9E9E9;
+	backdrop-filter: blur(2px);
+	/* Note: backdrop-filter has minimal browser support */
+	border-radius: 150px;
+}
+.swiper-slide-like {
+    transform: scale(0.75);
+    left: -21%;
+	top: -99%;
+}
+.slide-like-btn {
+    transform: scale(0.75);
+	top: -117%;
+}
+.swiper-slide:nth-child(even) p {
+  position: relative;
+  top: -3%;
+}
+.new-painting-block {
+	margin-top: 20%;
+}
+.new-painting {
+	width: 318px;
+	height: 112px;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 60px;
+	/* or 150% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+	position: relative;
+	top: 1vh;
+}
+.new-painting-image {
+	width: 315.4px;
+	height: 249.08px;
+	margin-top: -7vh;
+}
+.new-painting-text {
+	width: 206px;
+	height: 32px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	/* or 150% */
+	text-align: center;
+	color: #3D3D3D;	
+	margin-top: 5%;
+}
+.new-painting-price {
+	width: 143px;
+	height: 22px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	/* or 140% */
+	text-align: center;
+	color: #3D3D3D;
+	padding-top: 5%;
+}
+.new-painting-button {
+	position: relative;
+	width: 120px;
+	height: 44px;
+	background: #4137D0;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	/* or 111% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;	
+	top: -0.9vh;
+}
+.new-painting-block {
+	padding-top: 0%;	
+}
+.new-painting-image {
+	width: 315.4px;
+	height: 249.08px;
+}
+
+.img__philosophy__one {
+	display: none;	
+}
+.img__philosophy__two {
+	display: none;	
+}
+.philosophy {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	/* identical to box height, or 125% */
+	text-transform: uppercase;
+	color: #272727;
+	padding-left: 4%;
+	position: relative;
+	top: 1vh;
+}
+.stroke {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 35px;
+	color: #fff!important;
+	text-shadow: 1px 1px 1px #292929;
+	margin-top: -3%;
+}
+.main__text {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	padding-left: 7%;
+}
+.img__philosophy__group__768 {
+	display: none;
+}
+.img__philosophy__group__360 {
+	display: inline;
+	padding-top: 8%;
+}
+.philosophy__block__article__one {
+	margin-top: 0;
+}
+.philosophy__block__article__two {
+	margin-top: -3%;
+}
+.philosophy__block {
+    margin-top: 6%;
+}
+.nft {
+	top: -70vw;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 45px;
+	text-transform: uppercase;
+	left: 5vw;
+}
+.nft__marketplace {
+	top: -62vw;
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 45px;
+	left: 5vw;
+	text-transform: uppercase;
+}
+.nft__cryptos__768 {
+	top: -60vw;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 20px;
+	left: 5vw;
+}
+.swiper2 {
+  top: -173vw;
+}
+.swiper__block__nav__swiper2 {
+	position: relative;
+	top: -10vh;	
+	left: 0;
+	transform: scale(1);
+	width: 129px;
+	height: 39px;
+}
+.swiper2 img {
+	width: 147.63px;
+	height: auto;
+}
+.exhibitions__text {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	/* identical to box height, or 125% */
+	text-align: center;
+	text-transform: uppercase;
+	color: #272727;
+}
+.exhibitions__block {
+	width: 323px;
+	height: 563px;
+	top: -182vw;
+}
+.exhibitions__slider {
+	top: -22vh;
+}
+.exhibitions__slider__slide__image {
+	width: 86.59vw;
+	height: 86.59vw;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-weight: 600;
+	font-size: 16px !important;
+	line-height: 24px !important;
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-weight: 400 !important;
+	font-size: 14px !important;
+	line-height: 20px !important;
+	text-align: justify !important;
+	word-spacing: -1px;
+}
+.exhibitions__slider details > summary {
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	line-height: 30px !important;
+	position: relative;
+	top: -1.5vh;
+}
+.slider-nav {
+	left: 50vw;
+	transform: translateX(-50vw);
+	top: -22vh;
+}
+.slider-dots {
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(26px, 17px);
+}
+.slick-dots {
+	display: flex;
+	gap: 3vw;
+}
+.social-block {
+	gap: 0;
+	width: 92.5vw;
+	height: 19.444vw;
+	margin: 0 auto;
+	margin-top: -103vh;
+	margin-bottom: 0;
+	top: 9vw;
+}
+.social-block a {
+	text-decoration: none;
+	padding-left: 0;
+}
+.social__block__socialicon {
+	width: 15.277vw;
+	height: 15.277vw;
+	margin-left: 1.4vw;
+	margin-right: 2vw;
+}
+.social__block__text {
+	font-size: 16px;
+	line-height: 16px;
+	margin-left: 0;
+}
+.social__block__socialmedia {
+	width: 13.888vw;
+	height: 13.888vw;
+	background: #FFFFFF;
+	box-shadow: 0px 8px 15px #C9C9C9;
+}
+.block__socialicon__socialicon {
+	width: 9.411vw;
+	height: 7.98vw;
+}
+.block__socialicon__socialfecebook {
+	width: 3.322vw;
+	height: 6.641vw;
+}
+.block__socialicon__socialtiktok {
+	width: 5.297vw;
+	height: 6.03vw;
+}
+.block__socialicon__socialinsta {
+	width: 6.038vw;
+	height: 6.038vw;
+}
+.block__socialicon__youtube {
+	width: 7.358vw;
+	height: 5.153vw;
+}
+.socialmedia__link__fecebook {
+	position: relative;
+	top: 11vh;
+	left: -74vw;
+}
+.socialmedia__link__tiktok {
+	position: relative;
+	top: 11vh;
+	left: -71vw;
+}
+.socialmedia__link__insta {
+	position: relative;
+	top: 11vh;
+	left: -68vw;
+}
+.socialmedia__link__youtube {
+	position: relative;
+	top: 11vh;
+	left: -65vw;
+}
+.banner__section__gallery {
+  top: 385px;
+}
+}
+@media screen and (max-width: 355px) {
+.new-painting {
+	font-size: calc(100vw/10); 
+}
+.new-painting-text {
+font-size: calc(100vw/20);	
+}
+.new-painting-price {
+font-size: calc(100vw/15);	
+}
+.new-painting-button {
+font-size: calc(100vw/25);	
+}
+.new-painting-image {
+	width: 95%;
+	height: auto;
+}
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+.exhibitions__text {
+	font-size: calc(100vw/10);
+}
+.exhibitions__block {
+	width: 90%;
+	height: auto;
+	top: -195vw;
+}
+.exhibitions__slider figcaption :nth-child(1) {
+	font-size: calc(100vw/20) !important;
+	line-height: calc(100vw/20) !important; 
+}
+.exhibitions__slider figcaption :nth-child(2) {
+	font-size: calc(100vw/30) !important;
+	line-height: calc(100vw/20) !important; 
+}
+.exhibitions__slider details > summary {
+	font-size: calc(100vw/35)  !important;
+	line-height: calc(100vw/35) !important;
+	top: 0;
+}
+.social-block {
+    top: -25vw;
+}
+.social__block__text {
+	font-size: calc(100vw/22);
+}
+}
+@media screen and (max-width: 350px) {
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+}
+@media screen and (max-width: 345px) {
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+.swiper2 img {
+	width: 140px;
+	height: auto;
+}
+}
+@media screen and (max-width: 340px) {
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+.swiper2 img {
+	width: 135px;
+	height: auto;
+}
+}
+@media screen and (max-width: 335px) {
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+.swiper2 img {
+	width: 135px;
+	height: auto;
+}
+}
+@media screen and (max-width: 330px) {
+.nft {
+	font-size: calc(100vw/10);
+}
+.nft__marketplace {
+	font-size: calc(100vw/10);
+}
+.nft__cryptos__768 {
+	font-size: calc(100vw/30);
+}
+}
+@media screen and (max-width: 325px) {
+.swiper2 img {
+	width: 130px;
+	height: auto;
+}
+}
+@media screen and (max-width: 320px) {
+
+.swiper2 img {
+	width: 130px;
+	height: auto;
+}
+}

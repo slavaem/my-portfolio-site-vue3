@@ -1,0 +1,229 @@
+
+.banner__section {
+  width: 100%;
+  height: 1319px;
+ background-image: url(../../../images/bg-header1920.jpg); 
+
+ background-size: 99.9% 100.1%;
+ -moz-background-size: 99.9% 100.1%; 
+ background-position: center; 
+ background-repeat: no-repeat;
+}
+.banner__section__katekulish {
+position: absolute;
+width: 938px; 
+height: 440px; 
+left: 88px; 
+top: 208px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 250px; 
+line-height: 220px; 
+/* or 88% */  
+text-transform: uppercase; 
+color: #FFFFFF;
+-webkit-text-stroke: 2px #000000;
+text-stroke: 2px #000000;
+text-shadow: 0px 6px 40px rgba(0, 0, 0, 0.9);
+
+}
+.banner__section__motivation  {
+display: flex;
+position: relative;
+top: 44.6%;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+height: 31px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 28px;
+/* or 108% */
+color: #FFFFFF;
+margin-inline: 7.3% 5%;
+gap: 2.6vw;
+}
+.banner__section__motivation li::before {
+content: url(../../../images/ellipse57.svg);
+
+margin-inline-end: 0.05vw;
+
+}
+
+.banner__section__gallery {
+ position: absolute;
+ width: 1218px;
+ height: 220px;
+ left: 55px;
+ top: 1218px;
+ font-family: 'Noto Serif';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 200px;
+ line-height: 220px;
+ text-transform: uppercase;
+ color: #272727;
+}
+@media screen and (max-width: 1256px) {
+.banner__section__gallery {
+font-size: calc(100vw/6.5); 
+}
+.banner__section__katekulish {
+ font-size: calc(100vw/6.5); 
+
+}	
+}	
+@media screen and (max-width: 768px) {
+.banner__section {
+ width: 100%;
+ height: 587px;
+ background-image: url(../../../images/bg-header768.jpg);
+}
+.banner__section__motivation  {
+font-size: 20px;
+margin-inline: 2.5% 40%;
+top: 38.1%;
+gap: 2vw;
+
+}
+.banner__section__motivation li:nth-child(3) {
+margin-top: -2.2%;
+letter-spacing: 0.1%; 
+}
+
+.banner__section__katekulish {
+width: 535px; 
+height: 180px; 
+left: 16px; 
+top: 105px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 90px; 
+line-height: 90px; 
+/* or 88% */  
+text-transform: uppercase; 
+
+
+}
+.banner__section__gallery {
+width: 474px; 
+height: 85px; 
+left: 15px; 
+top: 590px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 85px; 
+line-height: 85px;
+}
+}
+@media screen and (max-width: 640px) {
+.banner__section {
+ width: 100%;
+ height: 492px;
+}
+.banner__section__motivation  {
+top: 45%;
+}
+.banner__section__gallery {
+top: 490px; 
+font-size: calc(100vw/7); 
+}
+}
+@media screen and (max-width: 440px) {
+.banner__section__motivation  {
+font-size: 14px;
+line-height: 20px;
+margin-inline: 5% 40%;
+margin-top: -1.2%;
+gap: 3vw;
+}
+.banner__section__motivation li::before {
+content: url(../../../images/ellipse.svg);
+}
+}
+@media screen and (max-width: 425px) {
+.banner__section {
+ width: 100%;
+ height: 552px;
+ background-image: url(../../../images/bg-header360.jpg);
+}
+.banner__section__katekulish {
+width: 430px; 
+height: 150px; 
+left: 19px; 
+top: 85px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 70px; 
+line-height: 75px; 
+/* or 88% */  
+text-transform: uppercase; 
+}
+.banner__section__gallery {
+width: 474px; 
+height: 70px; 
+left: 15px; 
+margin-top: 25vw; 
+font-family: 'Noto Serif', serif; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 60px; 
+line-height: 70px;
+}
+.banner__section__motivation  {
+top: 45vw;
+}
+}
+@media screen and (max-width: 360px) {
+.banner__section {
+ width: 100%;
+ height: 425px;
+}
+.banner__section__katekulish {
+width: 322px; 
+height: 130px; 
+left: 19px; 
+top: 73px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 60px; 
+line-height: 65px; 
+/* or 88% */  
+text-transform: uppercase; 
+}
+.banner__section__motivation  {
+margin-inline: 5.45% 40%;
+top: 37%;
+gap: 2vw;
+font-size: 14px;
+line-height: 20px;
+}
+
+.banner__section__gallery {
+width: 474px; 
+height: 60px; 
+left: 18px; 
+top: 475px; 
+font-family: 'Noto Serif'; 
+font-style: normal; 
+font-weight: 400; 
+font-size: 40px; 
+line-height: 60px;
+}
+
+}
+@media screen and (max-width: 360px) {
+.banner__section__motivation  {
+margin-inline: 5.45% 40%;
+font-size: 14px;
+font-family: Poppins;
+line-height: 20px;
+}	
+}

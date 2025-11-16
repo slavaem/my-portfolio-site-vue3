@@ -1,3 +1,34 @@
 .manifest__section {
+min-height: 100vh;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+flex-direction: column;
+width: 100vw;
+height: calc(100vh - 160px);
+}
+
+/* Дневная тема */
+.manifest__section {
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position-y: top;
+background-color: rgba(86, 97, 242, 0.8);
+background-image:
+url(./images/dandelion1.svg),
+url(./images/dandelion2.svg),
+url(./images/dandelion3.svg);
+}
+/* 🌙 Тёмная тема */
+.dark .manifest__section {
+  background-color: #1f2a68;
+  background-image:
+    url(./images/fireflies.svg);
 
 }

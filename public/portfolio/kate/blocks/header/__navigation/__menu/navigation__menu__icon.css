@@ -1,0 +1,146 @@
+.navigation__menu__icon {
+ display: flex;
+ flex-wrap: nowrap;
+ width: 355px;
+ height: 47px;
+
+ flex-direction: row;
+ 
+}
+.navigation__menu__icon-line4 {
+position: relative;
+bottom: 7%;
+} 
+.navigation__menu__icon-sale {
+ display: flex;
+ flex-wrap: nowrap;
+ flex-direction: row;
+ width: 104px;
+ height: 46px;
+ justify-content: space-between;
+}
+.navigation__menu__icon-sale li {
+ width: 46px;
+ height: 46px;
+}
+.navigation__menu__icon-media {
+ display: flex;
+ flex-wrap: nowrap;
+ flex-direction: row;
+ justify-content: start;
+ width: 100%;
+ height: 46px;
+ margin-left: 3%;
+}
+.navigation__menu__icon-media li {
+ width: 46px;
+ height: 46px;
+ 
+}
+.navigation__menu__icon-line5 {
+display: none;
+}
+.navigation__menu__icon-basket_number {
+position: absolute;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+	}
+@media only screen and (max-width: 1920px)  {
+.navigation__menu__icon-media {
+ width: 71%;
+ gap:4%;
+}
+.navigation__menu__icon-sale {
+ width: 29%;
+}
+}
+@media only screen and (max-width: 1070px)  {
+}
+.navigation__menu__icon-sale {
+ width: 31%;
+}
+}
+@media screen and (max-width: 1020px) {
+.navigation__menu__icon {
+margin-left: 35vmin;
+}
+.navigation__menu__icon-line5 {
+display: block;
+position: relative;
+bottom: 7%;
+left: 10%;
+}
+}
+@media screen and (max-width: 988px)  {
+.navigation__menu__icon {
+margin-left: 10vmin;
+}	
+}	
+@media screen and (max-width: 824px)  {
+.navigation__menu__icon {
+margin-left: 3vmin;
+}	
+}	
+@media screen and (max-width: 768px) {
+.navigation__menu__icon {
+margin-left: 2%;
+}
+.navigation__menu__icon-media {
+ margin-left: 6%; 
+
+}
+.navigation__menu__icon-line5 {
+left: 10%;
+}
+.navigation__menu__icon-facebook { margin-left: 6%;}
+.navigation__menu__icon-instagram {}
+}
+@media screen and (max-width: 752px) {
+.navigation__menu__icon-line5 {
+left: 1%;
+}
+.navigation__menu__icon {
+margin-left: 2%;
+}
+.navigation__menu__icon-media {
+ margin-left: 1%; 
+}
+.navigation__menu__icon-facebook { margin-left: 1%;}
+}
+@media screen and (max-width: 700px) {
+.navigation__menu__icon-media {
+ display: none; 
+}
+.navigation__menu__icon-sale {
+ width: 30%;
+}
+}
+@media screen and (max-width: 570px) {
+.navigation__menu__icon-sale {
+ width: 33%;
+}
+}
+@media screen and (max-width: 516px) {
+.navigation__menu__icon-sale {
+ width: 36%;
+}
+}
+@media screen and (max-width: 478px) {
+.navigation__menu__icon-sale {
+ width: 40%;
+}
+}
+@media screen and (max-width: 432px) {
+.navigation__menu__icon-sale {
+ width: 42%;
+}
+}
+@media screen and (max-width: 425px) {
+.navigation__menu__icon {
+ display: none;
+}
+
+}

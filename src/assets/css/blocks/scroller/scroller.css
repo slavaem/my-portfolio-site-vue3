@@ -6,8 +6,7 @@
   scroll-snap-type: y mandatory;
   -ms-scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scroll-padding: 0.1px; /* Добавь отступы для плавности */
+  scroll-padding: 0.1px;
   z-index: 0;
 }
 
-        

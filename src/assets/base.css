@@ -1,4 +1,3 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -19,34 +18,36 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
 
-/* semantic color variables for this project */
-:root {
+  /* Светлая тема */
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
-
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
-
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
-
   --section-gap: 160px;
+
+  --scroller-main-color: var(--vt-c-white-soft);
+  --scroller-shadow-accent: #42b883;
+  --scroller-shadow-glow: rgba(66, 184, 131, 0.4);
 }
 
+/* 🌙 Тёмная тема */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
-
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
-
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --scroller-main-color: var(--vt-c-white-soft);
+    --scroller-shadow-accent: rgba(255, 255, 255, 0.3);
+    --scroller-shadow-glow: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -62,9 +63,7 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
+  transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family:
     Inter,
@@ -83,4 +82,122 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.scroller__text {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 3vh auto 0;
+  padding: 0 5%;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 32px);
+  line-height: clamp(1.8, 4vw, 2.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.scroller__text {
+  color: var(--scroller-main-color);
+  text-shadow:
+        0 0 4px var(--scroller-shadow-glow),
+        0 0 8px var(--scroller-shadow-glow);
+  transition: color 0.6s ease, text-shadow 1s ease;
+
+}
+
+@media screen and (max-width: 425px) {
+  .scroller__text {
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: clamp(2, 5vw, 2.4);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .scroller__text {
+    margin-top: -5vh;
+    line-height: 2.5;
+  }
+}
+
+@keyframes dayGlow {
+  0%, 100% {
+    color: #f8ffff;
+    transform: scale(1);
+    text-shadow:
+      0 0 4px rgba(0, 255, 180, 0.35),
+      0 0 8px rgba(0, 220, 255, 0.25),
+      0 0 16px rgba(0, 255, 190, 0.2);
+  }
+  50% {
+    color: #ffffff;
+    transform: scale(1.001);
+    text-shadow:
+      0 0 6px rgba(0, 240, 200, 0.55),
+      0 0 14px rgba(0, 255, 255, 0.4),
+      0 0 28px rgba(0, 255, 200, 0.3);
+  }
+}
+
+.scroller__text p {
+  animation: dayGlow 8s ease-in-out infinite;
+  transition: color 0.8s ease, text-shadow 1s ease;
+  display: inline-block;
+}
+
+@keyframes nightGlow {
+ 0%, 100% {
+    text-shadow:
+      0 0 4px #00ccff,
+      0 0 8px #00ccff,
+      0 0 12px rgba(0,204,255,0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 6px #00e0ff,
+      0 0 16px #00ccff,
+      0 0 32px rgba(0,255,255,0.8);
+  }
+}
+
+.dark .scroller__text p{
+  animation: nightGlow 3.5s ease-in-out infinite;
+  transition: color 0.5s ease, text-shadow 1s ease;
+}
+
+
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+html, body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+html.translated-ltr,
+html.translated-rtl {
+  height: auto !important;
+  min-height: 100% !important;
+  transform: none !important;
+}
+
+body > .skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+.adsbygoogle {
+  display: none !important;
+  height: 0 !important;
 }

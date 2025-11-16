@@ -1,0 +1,23 @@
+/*** Navigation Styles ***/
+.navigation {
+  
+  height: 81px;
+  width: 100%;
+  background: #272727;
+}
+@media screen and (max-width: 1920px) {
+.navigation {
+height: 81px;
+}
+@media screen and (max-width: 768px) {
+.navigation {
+
+height: 70px;
+}
+}
+@media screen and (max-width: 360px) {
+.navigation {
+
+height: 55px;
+}
+}

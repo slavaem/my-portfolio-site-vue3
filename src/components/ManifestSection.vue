@@ -8,10 +8,10 @@
 />
         <img class="manifest__section-image-tools" src="/images/tools.svg" alt="tools" />
       </li>
-      <li class="animation-delay--2 illustration-to-animate">Hello!</li>
-      <li class="animation-delay--3 illustration-to-animate">This small and beautiful website</li>
-     <li class="animation-delay--4 illustration-to-animate">was built using</li>
-     <li class="animation-delay--5 illustration-to-animate">the most powerful modern framework — Vue 3</li>
+<li class="animation-delay--2 illustration-to-animate">Hello!</li>
+<li class="animation-delay--3 illustration-to-animate">This small and beautiful site</li>
+<li class="animation-delay--4 illustration-to-animate">was built with Vue 3 — modern and powerful.</li>
+<li class="animation-delay--5 illustration-to-animate">Serious technology behind a playful design ✨</li>
     </ul>
 <div v-if="appStore.isScrollIndicatorVisible" class="scroll-indicator">
     ↓
@@ -31,42 +31,50 @@ defineProps({
   }
   })
 onMounted(() => {
-  isVisible.value = true 
+  isVisible.value = true
 })
 </script>
 
 <style scoped>
-.manifest__section {
-min-height: 100vh;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
-flex-direction: column;
-width: 100vw;
-height: calc(100vh - 160px);
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #00ccff,
+      0 0 8px #00ccff,
+      0 0 12px rgba(0,204,255,0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 6px #00e0ff,
+      0 0 16px #00ccff,
+      0 0 32px rgba(0,255,255,0.8);
+  }
 }
 
-.manifest-image-conteiner {
-display: flex;
-flex-direction: row;
+.manifest__section-line li {
+  animation: glow 3.5s ease-in-out infinite;
+  transition: color 0.5s ease;
 }
 
-.next-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-}
+
 .scroll-indicator {
   position: fixed;
-  bottom: 20px;
-  margin: 0 auto;
-  font-size: 32px;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(18px, 6vw, 48px);
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff;
+  animation: pulse 2s infinite;
+}
+
+
+.scroll-indicator {
+  position: fixed;
+  bottom: -2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(18px, 8vw + 2rem, 64px);
   color: #00ccff;
   text-shadow: 0 0 10px #00ccff;
   animation: pulse 2s infinite;
@@ -77,22 +85,15 @@ flex-direction: row;
   50% { opacity: 0.5; }
   100% { opacity: 1; }
 }
-/* Дневная тема */
-.manifest__section {
-background-repeat: no-repeat;
-background-size: 100% 100%;
-background-position-y: top;
-background-color: rgba(86, 97, 242, 0.8);
-background-image:
-url(./images/dandelion1.svg),
-url(./images/dandelion2.svg),
-url(./images/dandelion3.svg);
+
+@media screen and (max-width: 640px) {
+.scroll-indicator {
+  bottom: -4vw;
 }
-/* 🌙 Тёмная тема */
-.dark .manifest__section {
-  background-color: #1f2a68;
-  background-image:
-    url(./images/fireflies.svg);
-  
+}
+@media screen and (max-width: 425px) {
+.scroll-indicator {
+  bottom: -6vw;
+}
 }
 </style>

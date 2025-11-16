@@ -1,0 +1,25 @@
+.wriper {
+ display: block;
+ position: relative;
+ padding: 0;
+ width: 100vw;
+ height: auto;
+ overflow: hidden;
+ scroll-behavior: smooth; 
+ bacground: #FFFFFF;
+
+}
+@media screen and (max-width: 1920px) {
+.wriper {
+max-width: 1920px;
+}
+@media screen and (max-width: 768px) {
+.wriper {
+max-width: 768px;
+}
+}
+@media screen and (max-width: 360px) {
+.wriper {
+max-width: 360px;
+}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My online react player</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
+  </head>
+  <body>
+   <div id="container">
+   <div id="hook"></div>
+   <h1>Play Music</h1>
+   <input type="file" id="files" name="files[]" multiple />
+   </div>
+   <script type="text/babel">
+   function Svgplaystop(playing) {
+   const playpause = document.getElementById("playpause"),
+   lefttoplay = document.getElementById("lefttoplay"),
+   righttoplay = document.getElementById("righttoplay"),
+   lefttopause = document.getElementById("lefttopause"),
+   righttopause = document.getElementById("righttopause");
+   return (
+   <svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsXlink="http://www.w3.org/1999/xlink"
+   viewBox="0 0 50 50"
+   id="playpause"
+   >
+   <title>Play</title>
+   <polygon points="12,0 25,11.5 25,39 12,50" id="leftbar" />
+   <polygon points="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" id="rightbar" />
+   <animate
+   fill="freeze"
+   id="lefttopause"
+   attributeName="points"
+   begin="indefinite"
+   dur=".3s"
+   to="7,3 19,3 19,47 7,47"
+   xlinkHref="#leftbar"
+   ></animate>
+   <animate
+   fill="freeze"
+   id="lefttoplay"
+   attributeName="points"
+   begin="indefinite"
+   dur=".3s"
+   to="12,0 25,11.5 25,39 12,50"
+   xlinkHref="#leftbar"
+   ></animate>
+   <animate
+   fill="freeze"
+   id="righttopause"
+   attributeName="points"
+   begin="indefinite"
+   dur=".3s"
+   to="31,3 43,3 43,26 43,47 31,47"
+   xlinkHref="#rightbar"
+   ></animate>
+   <animate
+   fill="freeze"
+   attributeName="points"
+   id="righttoplay"
+   begin="indefinite"
+   dur=".3s"
+   to="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39"
+   xlinkHref="#rightbar"
+   ></animate>
+   </svg>
+   );
+   if (playing==true) { 
+   lefttopause.beginElement();
+   righttopause.beginElement();
+   } else { 
+   lefttoplay.beginElement();
+   righttoplay.beginElement();
+   
+   };
+   }
+   
+  class AudioPlayer extends React.Component {
+  constructor(props) {
+  super(props);
+  this.state = {
+  playing: false,
+  duration: 0,
+  currentTime: 0
+  };
+  this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
+  }   
+   handlePlay = () => {
+   this.audio.play()
+   this.setState({ playing: true })
+   lefttopause.beginElement();
+   righttopause.beginElement();
+   }
+   
+   handlePause = () => {
+   this.audio.pause()
+   this.setState({ playing: false })
+   lefttoplay.beginElement();
+   righttoplay.beginElement();
+   }
+   handleTimeUpdate = (props) => {
+   this.setState({
+   currentTime: this.audio.currentTime,
+   duration: this.audio.duration
+   })
+   }
+   
+   handleSeek = (e) => {
+   this.audio.currentTime = e.target.value;
+   }
+   render() {
+   const { playing, currentTime, duration } = this.state;
+   return (
+   <div>
+   <audio id="audio" ref={(audioTag) => { this.audio = audioTag }} onTimeUpdate={this.handleTimeUpdate} controls />
+   <button onClick={playing ? this.handlePause : this.handlePlay} id="button" >
+   <Svgplaystop />
+   </button>
+   <p></p>
+   <div className="range-wrap">
+   <div className="range-value" id="rangeV"></div>
+   <input
+   className="range"
+   id="range"
+   preload="metadata"
+   type="range"
+   name="range"
+   min={0}
+   max={duration}
+   step={0.01}
+   value={currentTime}
+   onChange={this.handleSeek}
+   onInput={this.handleSeek}
+   />
+   </div>
+   <p></p>
+   <output id="outputDuration">00:00</output>
+   
+   </div>
+   )
+   }
+   }
+   
+   const placeWeWantToPutComponent = document.getElementById('hook');
+   ReactDOM.render(<AudioPlayer />, placeWeWantToPutComponent);
+   
+   const
+   range = document.getElementById('range'),
+   rangeV = document.getElementById('rangeV'),
+   setValue = (e)=>{
+   let curTime = e.target.currentTime;
+   const minutes = ("0"+Math.floor(curTime / 60)).slice(-2);
+   const seconds = ("0"+Math.floor(curTime - minutes * 60)).slice(-2);
+   let
+   newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+   newPosition = 10 - (newValue * 0.2);
+   rangeV.innerHTML = `<span>${minutes}:${seconds}</span>`;
+   rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+   
+   };
+   const getDuration = function (e) {
+   let getdur =  e.target.duration;
+   const durmin = ("0"+Math.trunc(getdur / 60)).slice(-2);
+   const secRemain = ("0"+Math.trunc(getdur % 60)).slice(-2);
+   var curDur = `${durmin}:${secRemain}`;
+   document.getElementById('outputDuration').innerHTML = curDur;
+   }
+   document.addEventListener("DOMContentLoaded", setValue);
+   audio.addEventListener('loadedmetadata', getDuration);
+   audio.addEventListener('timeupdate', setValue);
+   </script>
+  
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+   <script src="https://soulwire.github.io/sketch.js/js/sketch.min.js"></script>
+   <script
+   src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
+   crossorigin></script>
+   <script src="app.js"></script>
+   
+
+  </body>
+</html>
+
+    

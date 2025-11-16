@@ -5,7 +5,7 @@
   height: auto;
   margin: 0 auto;
   flex-direction: column;
-  
+
 }
 .scroller__content h1 {
 font-size: calc(100vw / 30);

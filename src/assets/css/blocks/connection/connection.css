@@ -3,7 +3,7 @@
   position: fixed;
   width: 10vmin;
   height: 5vmax;
-  right: .5vmin;
+  left: 90vw;
   bottom: 2vmin;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -15,9 +15,9 @@
   transform: scale(1);
   transition: all 0.4s ease-in-out;
   animation: blurFade 0.8s ease-in-out, blurRotate 0.8s ease-in-out;
+  box-shadow: none;
 }
 
-/* Иконки */
 .connection {
   background-image: url(/images/connection.svg);
 }
@@ -25,7 +25,6 @@
   background-image: url(/images/good.svg);
 }
 
-/* Hover-эффекты */
 .connection:hover,
 .connection:focus,
 .connection_good:hover,
@@ -35,7 +34,20 @@
   filter: blur(0);
 }
 
-/* Анимации */
+.dark .connection,
+.dark .connection_good {
+  background-color: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.dark .connection:hover,
+.dark .connection_good:hover {
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 1));
+  transform: scale(1.08);
+}
+
 @keyframes blurFade {
   0% {
     opacity: 0;
@@ -63,16 +75,16 @@
   }
 }
 
-/* Адаптив */
 @media screen and (max-width: 1100px) {
   .connection, .connection_good {
-    width: 12vmin;
+    width: 10vmin;
     height: 7vmax;
+      left: 88vw;
   }
 }
 @media screen and (max-width: 820px) {
   .connection, .connection_good {
-    width: 13vmin;
+    width: 11vmin;
     height: 8vmax;
   }
 }
@@ -80,6 +92,7 @@
   .connection, .connection_good {
     width: 15vmin;
     height: 10vmax;
+      left: 80vw;
   }
 }
 @media screen and (max-width: 425px) {

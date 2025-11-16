@@ -1,0 +1,33 @@
+.navigation__menu__main {
+ width: 1044px;
+ height: 22px;
+ font-family: 'Poppins'; 
+ font-style: normal; 
+ font-weight: 600; 
+ font-size: 18px; 
+ line-height: 16px; 
+ /* or 89% */ 
+ display: inline-flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ align-items: start;
+}
+.navigation__menu__main a {
+ color: #FFFFFF;	
+}
+@media only screen and (max-width: 1920px)  {
+.navigation__menu__main {
+  width: 45%;
+}
+}
+@media only screen and (max-width: 1196px)  {
+.navigation__menu__main {
+ font-size:calc(12px + 0.3vw);
+}
+}
+@media screen and (max-width: 1020px) {
+.navigation__menu__main {
+display: none;
+}
+}

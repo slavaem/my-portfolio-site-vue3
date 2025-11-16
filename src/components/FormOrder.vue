@@ -16,7 +16,6 @@
       autocomplete="on"
       @submit.prevent="submitForm"
     >
-      <!-- Honeypot field (invisible to users) -->
       <input type="text" name="website" v-model="honeypot" class="hidden-input" tabindex="-1" autocomplete="off" />
 
       <input type="hidden" name="form_time" :value="formTime" />
@@ -34,7 +33,7 @@
           />
         </p>
         <p class="formorder__contact-email">
-          <label for="email">Email address</label>
+          <label for="email">Email</label>
           <input
             type="email"
             name="email"
@@ -112,7 +111,6 @@ const hideForm = () => {
   honeypot.value = ''
   successMessage.value = ''
   errorMessage.value = ''
-  // Очистка статуса отправки
   setTimeout(() => (isSent.value = false), 300)
 }
 
@@ -183,85 +181,10 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-input,
-textarea,
-button {
-  all: unset;
-  box-sizing: border-box;
-  font: inherit;
+.formorder__contact-info {
+padding-top: 10vw;
 }
 
-input,
-textarea {
-  border: 0.5px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 0.4em 0.6em;
-}
-
-input:focus,
-textarea:focus {
-  outline: 1px solid red;
-}
-
-.formorder__button__submit {
-  transition: all 0.6s ease;
-  background-color: #2aabee;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.formorder__button__submit:hover {
-  opacity: 0.85;
-}
-
-.formorder__button__submit:disabled {
-  cursor: default;
-  opacity: 0.7;
-}
-
-.formorder__button__submit--sent {
-  transform: translate(150%, -150%) rotate(-20deg) scale(0.4);
-  opacity: 0;
-}
-
-.formorder__button__submit:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 6px rgba(80, 145, 30, 0.5) inset;
-}
-
-.formorder__button__icon {
-  width: 20px;
-  height: 20px;
-}
-
-.pulse {
-  animation: pulse 1.4s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
 .hidden-input {
   display: none !important;
@@ -275,15 +198,5 @@ textarea:focus {
 .formorder__error {
   color: red;
   margin-top: 1rem;
-}
-
-@media all and (max-width: 480px) {
-  .formorder__button__submit {
-    width: fit-content;
-    font-size: 1.1rem;
-    padding: 10px;
-    margin: 1rem auto 0;
-    display: block;
-  }
 }
 </style>

@@ -28,7 +28,6 @@
 import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAppStore } from '@/stores/app.js'
-
 import Navigation from '@/components/Navigation.vue'
 import ManifestSection from '@/components/ManifestSection.vue'
 import Idea from '@/components/Idea.vue'
@@ -39,18 +38,13 @@ import Portfolio from '@/components/Portfolio.vue'
 const appStore = useAppStore()
 const router = useRouter()
 const route = useRoute()
-
-// секции
 const sections = ['manifest', 'idea', 'tools', 'principles', 'portfolio']
 const current = ref(route.params.section || 'manifest')
 
-// состояния
 const isHidden = ref(true)
 const isHovered = ref(false)
 const isCollapsed = computed(() => current.value !== 'manifest')
 const hasInteracted = ref(false)
-
-// карта компонентов
 const componentsMap = {
   manifest: ManifestSection,
   idea: Idea,
@@ -59,8 +53,6 @@ const componentsMap = {
   portfolio: Portfolio
 }
 const currentComponent = computed(() => componentsMap[current.value])
-
-// звук перелистывания
 const flipSound = ref(null)
 function handleFirstInteraction() {
   if (!hasInteracted.value) hasInteracted.value = true
@@ -72,12 +64,10 @@ function playFlip() {
   }
 }
 
-// слежение за маршрутом
 watch(() => route.params.section, (val) => {
   current.value = val || 'manifest'
 })
 
-// контейнер
 const containerRef = ref(null)
 onMounted(() => {
   nextTick(() => containerRef.value?.focus())
@@ -85,7 +75,6 @@ onMounted(() => {
   document.addEventListener('touchstart', handleFirstInteraction, { once: true })
 })
 
-// плавная навигация с фокусом
 function navigateTo(index) {
   if (index < 0 || index >= sections.length) return
   if (index !== sections.indexOf(current.value)) {
@@ -96,25 +85,22 @@ function navigateTo(index) {
   nextTick(() => containerRef.value?.focus())
 }
 
-// навигация по направлению
 function navigate(direction) {
   const idx = sections.indexOf(current.value)
   if (direction === 'next') navigateTo(idx + 1)
   if (direction === 'prev') navigateTo(idx - 1)
 }
 
-// свайпы
 let touchStartY = 0
 function onTouchStart(e) { touchStartY = e.touches[0].clientY }
 function onTouchEnd(e) {
   const deltaY = touchStartY - e.changedTouches[0].clientY
-  if (Math.abs(deltaY) > 30) { // чуть чувствительнее
+  if (Math.abs(deltaY) > 30) {
     if (deltaY > 0) navigate('next')
     else navigate('prev')
   }
 }
 
-// колесо мыши с throttling
 let isScrolling = false
 function throttleScroll(callback) {
   if (!isScrolling) {
@@ -130,25 +116,21 @@ function onWheel(e) {
   })
 }
 
-// клавиши
 function onKeydown(e) {
   if (e.key === 'ArrowDown') navigate('next')
   if (e.key === 'ArrowUp') navigate('prev')
 }
 
-// скрыть индикатор
 function hideIndicatorIfVisible() {
   if (appStore.isScrollIndicatorVisible) appStore.hideScrollIndicator()
 }
 
-// переход по клику
 function goToSection(section) {
   hideIndicatorIfVisible()
   const idx = sections.indexOf(section)
   if (idx !== -1) navigateTo(idx)
 }
 
-// фоны
 const backgrounds = ['eagle', 'dragonfly', 'mountain']
 const backgroundOrder = ref([])
 
@@ -184,7 +166,7 @@ const currentBgClass = computed(() => {
 }
 .eagle {
 background-color: rgba(121, 237, 252, .8);
-background-image: 
+background-image:
 url(./images/cloud.svg),
 url(./images/cloud1.svg),
 url(./images/cloud2.svg),
@@ -216,14 +198,14 @@ background-position-y: bottom;
 .dragonfly {
 color: rgba(255,255,240, 0.95);
 background-color: rgba(63, 155, 11, .8);
-background-image: 
+background-image:
 url(./images/grass4.svg),
 url(./images/dragonfly.svg);
  }
 
 @media (min-width: 768px) {
   .mountain {
-    background-image: 
+    background-image:
       url(./images/cloud.svg),
       url(./images/cloud1.svg),
       url(./images/cloud2.svg),
@@ -249,15 +231,15 @@ url(./images/dragonfly.svg);
 
 /* 🌙 Тёмная тема */
 .dark .eagle {
-  background-color: rgba(18, 24, 45, 0.95); 
-  background-image: 
+  background-color: rgba(18, 24, 45, 0.95);
+  background-image:
     url(./images/cloud-night.svg),
       url(./images/cloud1-night.svg),
       url(./images/cloud2-night.svg),
     url(./images/crescent-moon.svg);
-  
 
-  color: rgba(250, 245, 225, 0.9); /* мягкий теплый свет */
+
+  color: rgba(250, 245, 225, 0.9);
 }
 
 .dark .dragonfly {
@@ -269,7 +251,7 @@ url(./images/dragonfly.svg);
 
 @media (min-width: 768px) {
   .dark .mountain {
-    background-image: 
+    background-image:
       url(./images/cloud-night.svg),
       url(./images/cloud1-night.svg),
       url(./images/cloud2-night.svg),
@@ -292,5 +274,7 @@ url(./images/dragonfly.svg);
       url('./images/mountain-mobile-night.svg');
   }
 }
+
+
 
 </style>
