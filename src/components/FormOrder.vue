@@ -1,22 +1,19 @@
 <template>
   <div class="formorder" v-if="app.isFormVisible">
-    <button
-      type="button"
-      aria-label="Close"
-      class="formorder__buttonclose"
-      @click="hideForm"
-    >
+    <button type="button" aria-label="Close" class="formorder__buttonclose" @click="hideForm">
       <span class="formorder__buttonclose__text">Close</span>
       <span></span>
     </button>
 
-    <form
-      ref="formRef"
-      class="formorder__form"
-      autocomplete="on"
-      @submit.prevent="submitForm"
-    >
-      <input type="text" name="website" v-model="honeypot" class="hidden-input" tabindex="-1" autocomplete="off" />
+    <form ref="formRef" class="formorder__form" autocomplete="on" @submit.prevent="submitForm">
+      <input
+        type="text"
+        name="website"
+        v-model="honeypot"
+        class="hidden-input"
+        tabindex="-1"
+        autocomplete="off"
+      />
 
       <input type="hidden" name="form_time" :value="formTime" />
 
@@ -69,9 +66,9 @@
               class="formorder__button__icon"
               :class="{ pulse: !isSent }"
             />
-            Отправить в Telegram
+            Send to Telegram
           </span>
-          <span v-else>✈️ Отправлено!</span>
+          <span v-else>✈️ Sent!</span>
         </button>
       </fieldset>
 
@@ -79,7 +76,7 @@
 
       <p v-if="successMessage" class="formorder__success">
         {{ successMessage }}<br />
-        <small>Сообщение отправлено в Telegram ✅</small>
+        <small>The message was sent to Telegram ✅</small>
       </p>
       <p v-if="errorMessage" class="formorder__error">{{ errorMessage }}</p>
     </form>
@@ -137,7 +134,7 @@ watch(
       document.removeEventListener('keydown', onEsc)
       document.removeEventListener('mousedown', onClickOutside)
     }
-  }
+  },
 )
 
 onUnmounted(() => {
@@ -160,7 +157,7 @@ const submitForm = async () => {
   try {
     const res = await fetch('/send.php', {
       method: 'POST',
-      body: formData
+      body: formData,
     })
     const result = await res.json()
 
@@ -182,9 +179,8 @@ const submitForm = async () => {
 
 <style scoped>
 .formorder__contact-info {
-padding-top: 10vw;
+  padding-top: 10vw;
 }
-
 
 .hidden-input {
   display: none !important;

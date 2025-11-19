@@ -1,31 +1,23 @@
 <template>
-  <nav :class="['navigation', { navShadow: isCollapsed && !isHovered, navHover: isHovered }]"
-  @mouseenter="emit('mouseenter')"
-  @mouseleave="emit('mouseleave')"
+  <nav
+    :class="['navigation', { navShadow: isCollapsed && !isHovered, navHover: isHovered }]"
+    @mouseenter="emit('mouseenter')"
+    @mouseleave="emit('mouseleave')"
   >
     <div class="navigation__brand" @mouseout="removeActive">
-      <div
-        class="navigation__logo"
-        :class="{ active: isActive }"
-        @click="handleLogoClick"
-      >
+      <div class="navigation__logo" :class="{ active: isActive }" @click="handleLogoClick">
         <img class="navigation__logo-avatar" src="/images/avatar(1).svg" alt="avatar" />
       </div>
 
-        <div class="navigation__word-mark__wriper">
+      <div class="navigation__word-mark__wriper">
         <div class="navigation__word-mark">
-        <img class="navigation__word-mark-text" src="/images/name.svg" alt="name" />
-      </div>
-
+          <img class="navigation__word-mark-text" src="/images/name.svg" alt="name" />
+        </div>
       </div>
     </div>
 
     <div class="navigation__menu" ref="menuRef">
-      <div
-        class="navigation__menu-toggle"
-        :class="{ closeMenu: isOpen }"
-        @click.stop="toggleMenu"
-      >
+      <div class="navigation__menu-toggle" :class="{ closeMenu: isOpen }" @click.stop="toggleMenu">
         <div class="navigation__menu-icon">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -34,16 +26,12 @@
       </div>
 
       <ul :class="{ showMenu: isOpen }" class="navigation__menu-list">
-        <li
-          v-for="item in menuItems"
-          :key="item.label"
-          @click.stop="handleClick(item.path)"
-        >
+        <li v-for="item in menuItems" :key="item.label" @click.stop="handleClick(item.path)">
           <img :src="item.icon" :alt="item.label" />
         </li>
       </ul>
     </div>
-    <DayNightButton/>
+    <DayNightButton />
   </nav>
 
   <audio ref="sound" src="/audio/antdie.mp3" preload="auto"></audio>
@@ -65,12 +53,12 @@ const menuItems = [
   { label: 'Idea', path: 'idea', icon: '/images/idea.svg' },
   { label: 'Tools', path: 'tools', icon: '/images/toolswebmaster.svg' },
   { label: 'Principles', path: 'principles', icon: '/images/principles.svg' },
-  { label: 'Portfolio', path: 'portfolio', icon: '/images/portfolio.svg' }
+  { label: 'Portfolio', path: 'portfolio', icon: '/images/portfolio.svg' },
 ]
 
 defineProps({
   isCollapsed: Boolean,
-  isHovered: Boolean
+  isHovered: Boolean,
 })
 
 // Божья коровка
@@ -142,12 +130,10 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-
 }
 
 .navigation__word-mark {
   display: flex;
   justify-content: center;
 }
-
 </style>

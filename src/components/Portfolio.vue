@@ -1,20 +1,14 @@
 <template>
   <section class="scroller__section portfolio-page" :class="{ animate: isVisible }">
     <div class="scroller__content">
-      <h1
-        class="scroller__content-hide"
-        :class="{ scaleminus: hoveredIndex !== null }"
-      >
+      <h1 class="scroller__content-hide" :class="{ scaleminus: hoveredIndex !== null }">
         Work examples:
       </h1>
       <ul class="scroller__text scroller__text__portfolio">
         <li
           v-for="(item, index) in portfolioItems"
           :key="index"
-          :class="[
-            'illustration-to-animate',
-            `animation-delay--${index + 1}`
-          ]"
+          :class="['illustration-to-animate', `animation-delay--${index + 1}`]"
           :style="hoveredIndex === index ? getTransformStyle(item) : null"
           @mouseenter="hoveredIndex = index"
           @mouseleave="hoveredIndex = null"
@@ -24,7 +18,7 @@
               class="scroller__content-porfolio"
               :class="{
                 scaleplus: hoveredIndex === index,
-                scaleminus: hoveredIndex !== null && hoveredIndex !== index
+                scaleminus: hoveredIndex !== null && hoveredIndex !== index,
               }"
               :src="item.imgSrc"
               :alt="item.alt"
@@ -51,8 +45,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '70%', ty: '25%' }
-    }
+      mobile: { scale: 3.0, tx: '70%', ty: '25%' },
+    },
   },
   {
     href: '/portfolio/letter.html',
@@ -62,8 +56,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '0%', ty: '25%' }
-    }
+      mobile: { scale: 3.0, tx: '0%', ty: '25%' },
+    },
   },
   {
     href: '/portfolio/example/banerletter.html',
@@ -73,8 +67,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '-70%', ty: '25%' }
-    }
+      mobile: { scale: 3.0, tx: '-70%', ty: '25%' },
+    },
   },
   {
     href: '/portfolio/world/world.html',
@@ -84,8 +78,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '70%', ty: '-15%' }
-    }
+      mobile: { scale: 3.0, tx: '70%', ty: '-15%' },
+    },
   },
   {
     href: '/portfolio/quiz/quiz.html',
@@ -95,8 +89,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '0%', ty: '-15%' }
-    }
+      mobile: { scale: 3.0, tx: '0%', ty: '-15%' },
+    },
   },
   {
     href: '/portfolio/kate/kate.php',
@@ -106,8 +100,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '-70%', ty: '-15%' }
-    }
+      mobile: { scale: 3.0, tx: '-70%', ty: '-15%' },
+    },
   },
   {
     href: '/portfolio/reactplayer/player.html',
@@ -117,8 +111,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '70%', ty: '-55%' }
-    }
+      mobile: { scale: 3.0, tx: '70%', ty: '-55%' },
+    },
   },
   {
     href: 'https://web.archive.org/web/20241115012632/http://www.mriy-dom.com/',
@@ -128,8 +122,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '0%', ty: '-55%' }
-    }
+      mobile: { scale: 3.0, tx: '0%', ty: '-55%' },
+    },
   },
   {
     href: 'https://saaskit.us',
@@ -139,8 +133,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '-70%', ty: '-55%' }
-    }
+      mobile: { scale: 3.0, tx: '-70%', ty: '-55%' },
+    },
   },
   {
     href: '/portfolio/quiz vue/quiz_vue.html',
@@ -150,8 +144,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '70%', ty: '-55%' }
-    }
+      mobile: { scale: 3.0, tx: '70%', ty: '-55%' },
+    },
   },
   {
     href: 'https://interactive-landing-vue3.vercel.app/',
@@ -161,8 +155,8 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '0%', ty: '-55%' }
-    }
+      mobile: { scale: 3.0, tx: '0%', ty: '-55%' },
+    },
   },
   {
     href: 'https://7cobag.com',
@@ -172,9 +166,9 @@ const portfolioItems = [
     transforms: {
       desktop: { scale: 2.5, tx: '0%', ty: '0%' },
       tablet: { scale: 2.5, tx: '0%', ty: '5%' },
-      mobile: { scale: 3.0, tx: '-70%', ty: '-55%' }
-    }
-  }
+      mobile: { scale: 3.0, tx: '-70%', ty: '-55%' },
+    },
+  },
 ]
 
 const getTransformStyle = (item) => {
@@ -187,7 +181,7 @@ const getTransformStyle = (item) => {
   return {
     '--scale': t.scale,
     '--tx': t.tx,
-    '--ty': t.ty
+    '--ty': t.ty,
   }
 }
 
@@ -202,15 +196,14 @@ onMounted(() => {
 
 <style scoped>
 .scroller__content-porfolio {
-max-width: 80%;
-width: 15%;
-height: auto;
-opacity: .8;
--webkit-transition: -webkit-transform 1s linear;
-transition: -webkit-transform 1s linear;
--o-transition: transform 1s linear;
-margin-top: 1%;
-
+  max-width: 80%;
+  width: 15%;
+  height: auto;
+  opacity: 0.8;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  -o-transition: transform 1s linear;
+  margin-top: 1%;
 }
 
 .scroller__text__portfolio {
@@ -224,14 +217,15 @@ margin-top: 1%;
 .scroller__text__portfolio img {
   max-width: 80%;
   margin: 10px 0;
-  transition: transform 1s linear, opacity 1s linear !important;
+  transition:
+    transform 1s linear,
+    opacity 1s linear !important;
 }
 
 .scaleplus {
   transform: scale(var(--scale)) translate(var(--tx), var(--ty));
   opacity: 1;
 }
-
 
 .scaleminus {
   transform: scale(0.8);
@@ -271,30 +265,21 @@ margin-top: 1%;
   }
 }
 
-
 .dark .scroller__content-porfolio {
-    filter:
-    drop-shadow(0 0 3px rgba(0, 255, 255, 0.8))
-    drop-shadow(0 0 10px rgba(0, 255, 255, 0.8))
-    drop-shadow(0 0 20px rgba(0, 255, 255, 0.6))
-    drop-shadow(0 0 40px rgba(0, 255, 255, 0.4));
+  filter: drop-shadow(0 0 3px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(0, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.4));
   animation: breatheStrong 8s ease-in-out infinite;
 }
 
 @keyframes breatheStrong {
-  0%, 100% {
-    filter:
-      drop-shadow(0 0 4px rgba(0, 255, 255, 0.6))
-      drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))
-      drop-shadow(0 0 20px rgba(0, 255, 255, 0.4))
-      drop-shadow(0 0 40px rgba(0, 255, 255, 0.2));
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))
+      drop-shadow(0 0 20px rgba(0, 255, 255, 0.4)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.2));
   }
   50% {
-    filter:
-      drop-shadow(0 0 10px rgba(0, 255, 255, 1))
-      drop-shadow(0 0 20px rgba(0, 255, 255, 0.9))
-      drop-shadow(0 0 40px rgba(0, 255, 255, 0.6))
-      drop-shadow(0 0 80px rgba(0, 255, 255, 0.4));
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.9))
+      drop-shadow(0 0 40px rgba(0, 255, 255, 0.6)) drop-shadow(0 0 80px rgba(0, 255, 255, 0.4));
   }
 }
 
@@ -310,7 +295,8 @@ margin-top: 1%;
 }
 
 @keyframes softGlow {
-  0%, 100% {
+  0%,
+  100% {
     text-shadow:
       0 0 3px rgba(255, 255, 255, 0.3),
       0 0 6px rgba(255, 255, 255, 0.2),
@@ -323,6 +309,4 @@ margin-top: 1%;
       0 0 20px rgba(255, 255, 255, 0.2);
   }
 }
-
-
 </style>

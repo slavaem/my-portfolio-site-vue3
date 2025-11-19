@@ -14,4 +14,3 @@ const toggleForm = () => {
   app.isFormVisible = !app.isFormVisible
 }
 </script>
-

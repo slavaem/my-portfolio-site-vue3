@@ -1,24 +1,14 @@
 <template>
-  <div
-    class="daynightbutton"
-    @click="app.toggleTheme"
-  >
-    <span
-      class="icon sun"
-      :class="{ active: !app.isDark }"
-    >🌞</span>
+  <div class="daynightbutton" @click="app.toggleTheme">
+    <span class="icon sun" :class="{ active: !app.isDark }">🌞</span>
     /
-    <span
-      class="icon moon"
-      :class="{ active: app.isDark }"
-    >🌙</span>
+    <span class="icon moon" :class="{ active: app.isDark }">🌙</span>
   </div>
 </template>
 
 <script setup>
 import { useAppStore } from '@/stores/app'
 const app = useAppStore()
-
 </script>
 
 <style scoped>
@@ -27,7 +17,9 @@ const app = useAppStore()
   cursor: pointer;
   opacity: 0.8;
   user-select: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   animation: pulse 3s infinite ease-in-out;
   position: absolute;
   left: 50vw;
@@ -52,20 +44,24 @@ const app = useAppStore()
   transform: scale(1.4);
   opacity: 1;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
-  text-shadow: 0 0 6px #ffcc00, 0 0 12px #ffaa00;
+  text-shadow:
+    0 0 6px #ffcc00,
+    0 0 12px #ffaa00;
 }
-
 
 .moon.active {
   font-size: 3vw;
   transform: scale(1.4);
   opacity: 1;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
-  text-shadow: 0 0 6px #aee0ff, 0 0 12px #99ccff;
+  text-shadow:
+    0 0 6px #aee0ff,
+    0 0 12px #99ccff;
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-60%) scale(1);
   }
   50% {
@@ -75,30 +71,28 @@ const app = useAppStore()
 
 @media (width <= 767px) {
   .icon {
-  font-size: 4vw;
-}
+    font-size: 4vw;
+  }
 
-.sun.active {
-  font-size: 5vw;
-}
+  .sun.active {
+    font-size: 5vw;
+  }
 
-
-.moon.active {
-  font-size: 5vw;
-}
+  .moon.active {
+    font-size: 5vw;
+  }
 }
 @media (width <= 425px) {
   .icon {
-  font-size: 6vw;
-}
+    font-size: 6vw;
+  }
 
-.sun.active {
-  font-size: 7vw;
-}
+  .sun.active {
+    font-size: 7vw;
+  }
 
-
-.moon.active {
-  font-size: 7vw;
-}
+  .moon.active {
+    font-size: 7vw;
+  }
 }
 </style>

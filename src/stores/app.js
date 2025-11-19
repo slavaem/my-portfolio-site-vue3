@@ -4,9 +4,7 @@ import { ref, watch } from 'vue'
 export const useAppStore = defineStore('app', () => {
   const savedTheme = localStorage.getItem('theme')
   const isDark = ref(
-    savedTheme
-      ? savedTheme === 'dark'
-      : window.matchMedia('(prefers-color-scheme: dark)').matches
+    savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches,
   )
 
   const isFormVisible = ref(false)
@@ -21,7 +19,7 @@ export const useAppStore = defineStore('app', () => {
     localStorage.setItem('showScroll', 'false')
   }
 
-  watch(isDark, val => {
+  watch(isDark, (val) => {
     localStorage.setItem('theme', val ? 'dark' : 'light')
   })
 
@@ -30,6 +28,6 @@ export const useAppStore = defineStore('app', () => {
     toggleTheme,
     isFormVisible,
     isScrollIndicatorVisible,
-    hideScrollIndicator
+    hideScrollIndicator,
   }
 })
