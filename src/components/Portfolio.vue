@@ -261,7 +261,7 @@ margin-top: 1%;
     grid-template-columns: repeat(3, 1fr);
   }
   .scroller__content-porfolio {
-    width: 50%;
+    width: 40%;
   }
 }
 

@@ -33,7 +33,7 @@ width: 100%;
 @media screen and (max-width: 425px) {
   .manifest__section-line {
     font-size: clamp(1rem, 6vw + 0.3rem, 1.6rem);
-    margin-top: clamp(26vh, 28vw, 29vh);
+    margin-top: clamp(12vh, 14vw, 15vh);
     line-height: 1.8;
   }
 }
@@ -41,6 +41,5 @@ width: 100%;
 @media screen and (max-width: 320px) {
   .manifest__section-line {
     font-size: clamp(0.9rem, 7vw, 1.3rem);
-     margin-top: clamp(26vh, 28vw, 29vh);
   }
 }

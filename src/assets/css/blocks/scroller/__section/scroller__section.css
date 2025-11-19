@@ -1,13 +1,18 @@
 .scroller__section {
  width: 100vw;
  min-height:100vh;
+ min-height:100dvh;
  display: -webkit-box;
  display: flex;
  -webkit-box-pack: center;
  justify-content: center;
- scroll-snap-align: start;
- scroll-snap-stop: always;
  align-items: center;
  z-index: 0;
  flex-direction: column;
         }
+ 
+ @media (max-width: 768px) {
+  .scroller__section {
+    min-height: 90dvh; 
+  }
+}

@@ -93,6 +93,7 @@
     width: 15vmin;
     height: 10vmax;
       left: 80vw;
+      bottom: 15dvh ;
   }
 }
 @media screen and (max-width: 425px) {

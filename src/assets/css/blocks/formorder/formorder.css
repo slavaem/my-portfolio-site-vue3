@@ -191,6 +191,19 @@ textarea:focus {
      -ms-flex-direction: column;
          flex-direction: column;
         }
+ /* Ночная тема — placeholder */
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55); 
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.15); 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark input:focus::placeholder,
+.dark textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+}
 
 
 @media screen and (max-width: 1100px) {

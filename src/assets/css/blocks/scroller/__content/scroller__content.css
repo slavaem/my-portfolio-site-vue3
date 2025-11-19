@@ -30,7 +30,7 @@ font-size: calc(100vw / 6);
 margin-top: 0%;}
 .scroller__content h1 {
 font-size: calc(100vw / 15);
-margin-top: 20%;
+margin-top: 25%;
 }
 }
 @media screen and (max-width: 320px) {
