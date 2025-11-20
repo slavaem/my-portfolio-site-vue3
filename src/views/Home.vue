@@ -167,14 +167,14 @@ const currentBgClass = computed(() => {
 .eagle {
 background-color: rgba(121, 237, 252, .8);
 background-image:
-url(./images/cloud.svg),
-url(./images/cloud1.svg),
-url(./images/cloud2.svg),
-url(./images/cloud3.svg),
-url(./images/cloud4.svg),
-url(./images/cloud5.svg),
-url(./images/cloud6.svg),
-url(./images/bird.svg);
+url(/images/cloud.svg),
+url(/images/cloud1.svg),
+url(/images/cloud2.svg),
+url(/images/cloud3.svg),
+url(/images/cloud4.svg),
+url(/images/cloud5.svg),
+url(/images/cloud6.svg),
+url(/images/bird.svg);
 
 background-repeat: no-repeat;
 background-size: 100% 100%;
@@ -199,33 +199,33 @@ background-position-y: bottom;
 color: rgba(255,255,240, 0.95);
 background-color: rgba(63, 155, 11, .8);
 background-image:
-url(./images/grass4.svg),
-url(./images/dragonfly.svg);
+url(/images/grass4.svg),
+url(/images/dragonfly.svg);
  }
 
 @media (min-width: 768px) {
   .mountain {
     background-image:
-      url(./images/cloud.svg),
-      url(./images/cloud1.svg),
-      url(./images/cloud2.svg),
-      url(./images/cloud3.svg),
-      url(./images/cloud5.svg),
-      url(./images/cloud6.svg),
-      url('./images/mountain-desktop.svg');
+      url(/images/cloud.svg),
+      url(/images/cloud1.svg),
+      url(/images/cloud2.svg),
+      url(/images/cloud3.svg),
+      url(/images/cloud5.svg),
+      url(/images/cloud6.svg),
+      url('/images/mountain-desktop.svg');
   }
 }
 @media (max-width: 767px) {
   .mountain {
     background-image:
-      url(./images/cloud.svg),
-      url(./images/cloud1.svg),
-      url(./images/cloud2.svg),
-      url(./images/cloud3.svg),
-      url(./images/cloud4.svg),
-      url(./images/cloud5.svg),
-      url(./images/cloud6.svg),
-      url('./images/mountain-mobile.svg');
+      url(/images/cloud.svg),
+      url(/images/cloud1.svg),
+      url(/images/cloud2.svg),
+      url(/images/cloud3.svg),
+      url(/images/cloud4.svg),
+      url(/images/cloud5.svg),
+      url(/images/cloud6.svg),
+      url('/images/mountain-mobile.svg');
   }
 }
 
@@ -233,10 +233,10 @@ url(./images/dragonfly.svg);
 .dark .eagle {
   background-color: rgba(18, 24, 45, 0.95);
   background-image:
-    url(./images/cloud-night.svg),
-      url(./images/cloud1-night.svg),
-      url(./images/cloud2-night.svg),
-    url(./images/crescent-moon.svg);
+    url(/images/cloud-night.svg),
+      url(/images/cloud1-night.svg),
+      url(/images/cloud2-night.svg),
+    url(/images/crescent-moon.svg);
 
 
   color: rgba(250, 245, 225, 0.9);
@@ -244,34 +244,34 @@ url(./images/dragonfly.svg);
 
 .dark .dragonfly {
   background-image:
-    url(./images/grass-night.svg),
-    url(./images/fireflies.svg),
+    url(/images/grass-night.svg),
+    url(/images/fireflies.svg),
     linear-gradient(to top, #1c224c, #0d122b);
 }
 
 @media (min-width: 768px) {
   .dark .mountain {
     background-image:
-      url(./images/cloud-night.svg),
-      url(./images/cloud1-night.svg),
-      url(./images/cloud2-night.svg),
-      url(./images/cloud3-night.svg),
-      url(./images/cloud5-night.svg),
-      url(./images/cloud6-night.svg),
-      url('./images/mountain-desktop-night.svg');
+      url(/images/cloud-night.svg),
+      url(/images/cloud1-night.svg),
+      url(/images/cloud2-night.svg),
+      url(/images/cloud3-night.svg),
+      url(/images/cloud5-night.svg),
+      url(/images/cloud6-night.svg),
+      url('/images/mountain-desktop-night.svg');
   }
 }
 @media (max-width: 767px) {
   .dark .mountain {
     background-image:
-      url(./images/cloud-night.svg),
-      url(./images/cloud1-night.svg),
-      url(./images/cloud2-night.svg),
-      url(./images/cloud3-night.svg),
-      url(./images/cloud4-night.svg),
-      url(./images/cloud5-night.svg),
-      url(./images/cloud6-night.svg),
-      url('./images/mountain-mobile-night.svg');
+      url(/images/cloud-night.svg),
+      url(/images/cloud1-night.svg),
+      url(/images/cloud2-night.svg),
+      url(/images/cloud3-night.svg),
+      url(/images/cloud4-night.svg),
+      url(/images/cloud5-night.svg),
+      url(/images/cloud6-night.svg),
+      url('/images/mountain-mobile-night.svg');
   }
 }
 
