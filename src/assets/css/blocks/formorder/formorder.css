@@ -32,6 +32,11 @@ textarea:focus {
   background: none;
 }
 
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .formorder {
   color: #000;
  -webkit-box-sizing: border-box;
@@ -191,7 +196,6 @@ textarea:focus {
      -ms-flex-direction: column;
          flex-direction: column;
         }
- /* Ночная тема — placeholder */
 .dark input::placeholder,
 .dark textarea::placeholder {
   color: rgba(255, 255, 255, 0.55); 

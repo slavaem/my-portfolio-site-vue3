@@ -125,10 +125,6 @@
   opacity: 0.7;
 }
 
-.formorder__button__submit--sent {
-  transform: translate(150%, -150%) rotate(-20deg) scale(0.4);
-  opacity: 0;
-}
 
 .formorder__button__submit:active {
   transform: scale(0.98);

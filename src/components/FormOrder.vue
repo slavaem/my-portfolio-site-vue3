@@ -5,36 +5,33 @@
       <span></span>
     </button>
 
-    <form ref="formRef" class="formorder__form" autocomplete="on" @submit.prevent="submitForm">
-      <input
-        type="text"
-        name="website"
-        v-model="honeypot"
-        class="hidden-input"
-        tabindex="-1"
-        autocomplete="off"
-      />
+    <form ref="formRef" class="formorder__form" @submit.prevent="submitForm">
 
+      <!-- Honeypot -->
+      <input type="text" name="website" v-model="honeypot" class="hidden-input" />
+
+      <!-- Time Trap -->
       <input type="hidden" name="form_time" :value="formTime" />
 
       <fieldset class="formorder__contact-info">
-        <p class="formorder__contact-name">
+        <p>
           <label for="name">Name</label>
           <input
             type="text"
-            name="name"
             id="name"
+            name="name"
             required
             placeholder="Your name.."
             v-model="name"
           />
         </p>
-        <p class="formorder__contact-email">
+
+        <p>
           <label for="email">Email</label>
           <input
             type="email"
-            name="email"
             id="email"
+            name="email"
             required
             placeholder="Your email.."
             v-model="email"
@@ -43,42 +40,37 @@
       </fieldset>
 
       <fieldset class="formorder__order-info">
-        <div class="formorder__wrapermessage">
+        <div>
           <label for="message">Message</label>
           <textarea
-            name="message"
             id="message"
+            name="message"
+            required
             placeholder="Your message.."
             v-model="message"
           ></textarea>
         </div>
 
+        <!-- SUBMIT BUTTON -->
         <button
           class="formorder__button__submit"
-          :class="{ 'formorder__button__submit--sent': isSent }"
-          :disabled="isSent"
+          :class="{
+            'formorder__button__submit--sent': isSent,
+            'formorder__button__submit--error': isError
+          }"
           type="submit"
+          :disabled="isSent"
         >
-          <span v-if="!isSent">
-            <img
-              src="/images/telegram-icon.svg"
-              alt="Telegram"
-              class="formorder__button__icon"
-              :class="{ pulse: !isSent }"
-            />
+          <span v-if="!isSent && !isError">
+            <img src="/images/telegram-icon.svg" class="formorder__button__icon pulse" />
             Send to Telegram
           </span>
-          <span v-else>✈️ Sent!</span>
+
+          <span v-if="isSent">✈️ Sent!</span>
+          <span v-if="isError">❌ Not sent</span>
         </button>
       </fieldset>
 
-      <input type="hidden" name="act" value="order" />
-
-      <p v-if="successMessage" class="formorder__success">
-        {{ successMessage }}<br />
-        <small>The message was sent to Telegram ✅</small>
-      </p>
-      <p v-if="errorMessage" class="formorder__error">{{ errorMessage }}</p>
     </form>
   </div>
 </template>
@@ -86,113 +78,135 @@
 <script setup>
 import { ref, watch, onUnmounted } from 'vue'
 import { useAppStore } from '@/stores/app'
-const app = useAppStore()
-const formRef = ref(null)
-const isSent = ref(false)
 
+const app = useAppStore()
+
+// Refs
+const formRef = ref(null)
+const honeypot = ref('')
 const name = ref('')
 const email = ref('')
 const message = ref('')
-const honeypot = ref('')
-const formTime = Math.floor(Date.now() / 1000)
 
-const successMessage = ref('')
-const errorMessage = ref('')
+// UI States
+const isSent = ref(false)
+const isError = ref(false)
 
-const hideForm = () => {
-  app.isFormVisible = false
-  formRef.value?.reset()
+// TIME TRAP timestamp
+const formTime = ref(Date.now())
+
+// Reset form
+function resetForm() {
   name.value = ''
   email.value = ''
   message.value = ''
   honeypot.value = ''
-  successMessage.value = ''
-  errorMessage.value = ''
-  setTimeout(() => (isSent.value = false), 300)
+  isSent.value = false
+  isError.value = false
+
+  // new timestamp for each open
+  formTime.value = Date.now()
 }
 
-// ESC key
-const onEsc = (e) => {
-  if (e.key === 'Escape') hideForm()
+function hideForm() {
+  app.isFormVisible = false
+  resetForm()
 }
 
-// Outside click
+// Close on ESC
+const onEsc = (e) => e.key === 'Escape' && hideForm()
+
+// Close on OUTSIDE click
 const onClickOutside = (e) => {
-  const formElement = document.querySelector('.formorder__form')
-  if (formElement && !formElement.contains(e.target)) hideForm()
+  const wrapper = formRef.value?.parentElement
+  if (wrapper && !wrapper.contains(e.target)) hideForm()
 }
 
-watch(
-  () => app.isFormVisible,
-  (visible) => {
-    if (visible) {
-      document.addEventListener('keydown', onEsc)
-      document.addEventListener('mousedown', onClickOutside)
-      setTimeout(() => (isSent.value = false), 300)
-      formRef.value?.reset()
-    } else {
-      document.removeEventListener('keydown', onEsc)
-      document.removeEventListener('mousedown', onClickOutside)
-    }
-  },
-)
+// Watch form visibility
+watch(() => app.isFormVisible, (visible) => {
+  if (visible) {
+    resetForm()
+    document.addEventListener('keydown', onEsc)
+    document.addEventListener('mousedown', onClickOutside)
+  } else {
+    document.removeEventListener('keydown', onEsc)
+    document.removeEventListener('mousedown', onClickOutside)
+  }
+})
 
+// Clean up
 onUnmounted(() => {
   document.removeEventListener('keydown', onEsc)
   document.removeEventListener('mousedown', onClickOutside)
 })
 
-// Submit logic
+// FORM SUBMIT
 const submitForm = async () => {
-  if (honeypot.value.trim() !== '') {
-    errorMessage.value = 'Bot detected'
-    return
-  }
-
-  const formData = new FormData(formRef.value)
-  formData.append('act', 'order')
-  formData.append('form_time', formTime)
-  formData.append('website', honeypot.value)
+  if (honeypot.value) return // bot ignore
 
   try {
-    const res = await fetch('/send.php', {
-      method: 'POST',
-      body: formData,
-    })
+    const formData = new FormData(formRef.value)
+    formData.append('act', 'order')
+
+    const res = await fetch('/send.php', { method: 'POST', body: formData })
+
+    const contentType = res.headers.get('content-type')
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Non-JSON response from server.')
+    }
+
     const result = await res.json()
 
     if (result.status === 'success') {
-      successMessage.value = result.message
-      errorMessage.value = ''
       isSent.value = true
-      formRef.value?.reset()
+      isError.value = false
+      setTimeout(() => hideForm(), 1200)
     } else {
-      errorMessage.value = result.message || 'Something went wrong'
-      successMessage.value = ''
+      triggerError(result.message)
     }
-  } catch (err) {
-    errorMessage.value = 'Network error'
-    successMessage.value = ''
+  } catch (e) {
+    triggerError(e.message)
   }
+}
+
+function triggerError(msg = 'Unknown error') {
+  isSent.value = false
+  isError.value = true
+  console.error(msg)
+  setTimeout(() => (isError.value = false), 2000)
 }
 </script>
 
 <style scoped>
+/* Стили оставлены без изменений */
 .formorder__contact-info {
   padding-top: 10vw;
 }
-
+  
 .hidden-input {
   display: none !important;
 }
-
-.formorder__success {
-  color: green;
-  margin-top: 1rem;
+/* SUCCESS */
+.formorder__button__submit--sent span {
+  background: #28c76f !important; 
 }
 
-.formorder__error {
-  color: red;
-  margin-top: 1rem;
+/* ERROR */
+.formorder__button__submit--error span {
+  background: #ff4d4d !important;
 }
+
+.formorder__button__submit--error {
+  animation: errorShake 0.45s ease;
+}
+
+@keyframes errorShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
 </style>

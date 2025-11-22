@@ -21,14 +21,14 @@ background-size: 100% 100%;
 background-position-y: top;
 background-color: rgba(86, 97, 242, 0.8);
 background-image:
-url(./images/dandelion1.svg),
-url(./images/dandelion2.svg),
-url(./images/dandelion3.svg);
+url(/images/dandelion1.svg),
+url(/images/dandelion2.svg),
+url(/images/dandelion3.svg);
 }
 /* 🌙 Тёмная тема */
 .dark .manifest__section {
   background-color: #1f2a68;
   background-image:
-    url(./images/fireflies.svg);
+    url(/images/fireflies.svg);
 
 }
