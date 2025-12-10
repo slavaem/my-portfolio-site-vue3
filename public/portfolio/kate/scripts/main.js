@@ -1,121 +1,114 @@
-//swiper slider
-new Swiper('.swiper1', {
-  slidesPerView: 1,
-  loop: true,
-  spaceBetween: 10,
-    breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    // when window width is >= 1200px
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  },
-  loopAdditionalSlides: 1,
-  // Вывод стрелок навигации
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  pagination: {
-    el: '.swiper-pagination',
-	clickable: true,
-  },
-    // Вывод скроллбара
-  scrollbar: {
-    el: '.swiper-scrollbar',
-     draggable: true
-  },
+$(document).ready(function () {
+  // 1. MAIN SLIDER (Верхний)
+  $('.main-slider').slick({
+    infinite: true,
+    arrows: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
 
-  
-	
-  });
-  
+    draggable: true,
+    touchMove: true,
+    variableWidth: true,
+    adaptiveHeight: false,
+    appendArrows: '.main-slider-nav',
+    appendDots: '.main-dots',
+    prevArrow: $('.main-prev'),
+    nextArrow: $('.main-next'),
+
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+        },
+      },
+    ],
+  })
+
+  // 2. SWIPER
   new Swiper('.swiper2', {
-  slidesPerView: 1,
-  loop: true,
-  centeredSlides: true,
-  spaceBetween: 0,
-    breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 0
-    },
-	370: {
-      slidesPerView: 3,
-      spaceBetween: 0
-    },
-	610: {
-      slidesPerView: 4,
-      spaceBetween: 0
-    },
-	 910: {
-      slidesPerView: 5,
-      spaceBetween: 0
-    },
-	1320: {
-      slidesPerView: 6,
-      spaceBetween: 0
-    }
-  },
-  loopAdditionalSlides: 1,
-  // Вывод стрелок навигации
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 0,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper2-next',
+      prevEl: '.swiper2-prev',
     },
-  pagination: {
-    el: '.swiper-pagination',
-	clickable: true,
-  },
-    // Вывод скроллбара
-  scrollbar: {
-    el: '.swiper-scrollbar',
-     draggable: true
-  },
-	
-  });
-//slikslider
-$(document).ready(function(){
-      $('.exhibitions__slider').slick({
-       infinite: true,
-	   draggable: true,
-	   arrows: true,
-	   dots: true,
-	   appendArrows:'.slider-nav',
-	   prevArrow: ".arrow-left",
-       nextArrow: ".arrow-right",
-      appendDots: '.slider-dots',
-      slidesToShow: 3,
-      slidesToScroll: 1,
-	  responsive: [
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
+    pagination: {
+      el: '.swiper2-pagination',
+      clickable: true,
     },
-    {
-      breakpoint: 361,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
- });
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      370: { slidesPerView: 3 },
+      610: { slidesPerView: 4 },
+      910: { slidesPerView: 5 },
+      1320: { slidesPerView: 6 },
+    },
+    loopAdditionalSlides: 1,
+  })
+
+  // 3. EXHIBITIONS SLIDER (Нижний)
+  $('.exhibitions__slider').slick({
+    infinite: true,
+    draggable: true,
+    arrows: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    appendArrows: '.slider-nav',
+    appendDots: '.exh-dots',
+    prevArrow: $('.exh-prev'),
+    nextArrow: $('.exh-next'),
+
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 361,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  })
+})

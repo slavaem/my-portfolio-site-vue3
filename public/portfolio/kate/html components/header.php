@@ -18,13 +18,22 @@
       </ul>
       <div class="navigation__menu__icon">
       <ul class="navigation__menu__icon-sale">
-      <li><a href="#"><img src="./images/basket.svg" alt="Basket">
-	    <svg class="navigation__menu__icon-basket_number" transform="translate(-17,-2)"  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <circle  cx="9" cy="9" r="9" fill="#4137D0"/>
-		 <text fill="#FFFFFF" x="40%" y="70%">1</text>
-		</svg>
+      <li class="navigation__menu__basket"><a href="#" class="snipcart-checkout">
+  <img src="./images/basket.svg" alt="Basket">
+
+  <svg class="navigation__menu__icon-basket_number" width="18" height="18" viewBox="0 0 18 18">
+    <circle cx="9" cy="9" r="9" fill="#4137D0"/>
+    <foreignObject x="0" y="0" width="18" height="18">
+      <span xmlns="http://www.w3.org/1999/xhtml"
+            class="snipcart-items-count"
+            style="color:white;font-size:12px;font-weight:bold;
+                   display:flex;align-items:center;justify-content:center;height:18px;">
+        0
+      </span>
+    </foreignObject>
+  </svg>
 </a></li>
-      <li><a href="#"><img src="./images/like.svg" alt="Like"></a></li>
+      <li class="navigation__menu__like"><a href="#"><img src="./images/like.svg" alt="Like"></a></li>
       </ul>
       <ul class="navigation__menu__icon-media">
       <img class="navigation__menu__icon-line4" src="./images/Line 4.svg" alt="">

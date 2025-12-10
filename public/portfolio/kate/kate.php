@@ -15,101 +15,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 </style>
 </head>
-<body translate="yes">
+<body translate="no">
 <div  class = "wriper">
 <?php require "html components/header.php" ?>
   <main class="main">
- <div class="main-swiper">
- <div class="swiper-container swiper1">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-		<img src="images/pt3.jpg" alt="">
-		<p>Name of the painting</p>
-		<p>(12.05.2020)</p>
-		<p>330.00 USD</p>
-		<p>Buy</p>
-		<div class="swiper-slide-like">
-		<img class="like__heart" src="./images/heart.svg" alt="Like">
-		<div class="like__count">66</div>
-		</div> 
-		<div class="slide-like-btn">
-		<img class="like__btn" src="./images/btnheart.svg" alt="Like">
-		</div> 
-	</div>
-    <div class="swiper-slide">
-		<img src="images/pt4.jpg" alt=""><p>Name of the painting</p>
-		<p>(12.05.2020)</p>
-		<p>330.00 USD</p>
-		<p>Buy</p>
-		<div class="swiper-slide-like">
-		<img class="like__heart" src="./images/heart.svg" alt="Like">
-		<div class="like__count">66</div>
-		</div> 
-		<div class="slide-like-btn">
-		<img class="like__btn" src="./images/btnheart.svg" alt="Like">
-		</div> 
-	 </div>
-    <div class="swiper-slide">
-		<img src="images/pt1.jpg" alt=""><p>Name of the painting</p>
-		<p>(12.05.2020)</p>
-		<p>330.00 USD</p>
-		<p>Buy</p>
-		 <div class="swiper-slide-like">
-		<img class="like__heart" src="./images/heart.svg" alt="Like">
-		<div class="like__count">66</div>
-		</div> 
-		<div class="slide-like-btn">
-		<img class="like__btn" src="./images/btnheart.svg" alt="Like">
-		</div> 
-	</div>
-    <div class="swiper-slide">
-		<img src="images/pt5.jpg" alt="">
-		<p>Name of the painting</p>
-		<p>(12.05.2020)</p>
-		<p>330.00 USD</p>
-		<p>Buy</p>
-		<div class="swiper-slide-like">
-		<img class="like__heart" src="./images/heart.svg" alt="Like">
-		<div class="like__count">66</div>
-		</div> 
-		<div class="slide-like-btn">
-		<img class="like__btn" src="./images/btnheart.svg" alt="Like">
-		</div> 
-	 </div>
-	<div class="swiper-slide">
-		<img src="images/pt2.jpg" alt="">
-		<p>Name of the painting</p>
-		<p>(12.05.2020)</p>
-		<p>330.00 USD</p>
-		<p>Buy</p>
-		<div class="swiper-slide-like">
-		<img class="like__heart" src="./images/heart.svg" alt="Like">
-		<div class="like__count">66</div>
-		</div> 
-		<div class="slide-like-btn">
-		<img class="like__btn" src="./images/btnheart.svg" alt="Like">
-		</div> 
-	 </div>
-  </div>
-<center><div class="swiper-block-nav">
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
+<section class="main-swiper">
+  <div class="main-slider">
 
-<!-- Добавление буллитов в HTML код -->
-<div class="swiper-pagination"></div>
-</div></center>   
-</div>  
+    <div class="painting-slide">
+       <div class="slide-media">
+        <img class="painting-slide-image" src="images/pt3.jpg" alt="">
+          <div class="swiper-slide-like">
+            <img class="like__heart" src="./images/heart.svg">
+              <div class="like__count">66</div>
+          </div>
+          <div class="slide-like-btn">
+            <img class="like__btn" src="./images/btnheart.svg">
+          </div>
+        </div>
+      <p>Name of the painting</p>
+      <p>(12.05.2020)</p>
+      <p>330.00 USD</p>
+      <button class="snipcart-add-item slide-buy"
+        data-item-id="pt3"
+        data-item-name="Name of the painting"
+        data-item-price="330"
+        data-item-url="/"
+        data-item-image="images/pt3.jpg"
+        data-item-description="Original painting by Kate Kulish">
+        Buy
+      </button>
+    </div>
+
+    <div class="painting-slide">
+       <div class="slide-media">
+        <img class="painting-slide-image" src="images/pt4.jpg" alt="">
+          <div class="swiper-slide-like">
+            <img class="like__heart" src="./images/heart.svg">
+              <div class="like__count">66</div>
+          </div>
+          <div class="slide-like-btn">
+            <img class="like__btn" src="./images/btnheart.svg">
+          </div>
 </div>
+      <p>Name of the painting</p>
+      <p>(12.05.2020)</p>
+      <p>330.00 USD</p>
+      <button class="snipcart-add-item slide-buy"
+        data-item-id="pt4"
+        data-item-name="Name of the painting"
+        data-item-price="330"
+        data-item-url="/"
+        data-item-image="images/pt4.jpg"
+        data-item-description="Original painting by Kate Kulish">
+        Buy
+      </button>
+    </div>
+
+    <div class="painting-slide">
+       <div class="slide-media">
+        <img class="painting-slide-image" src="images/pt1.jpg" alt="">
+          <div class="swiper-slide-like">
+            <img class="like__heart" src="./images/heart.svg">
+              <div class="like__count">66</div>
+          </div>
+          <div class="slide-like-btn">
+            <img class="like__btn" src="./images/btnheart.svg">
+          </div>
+</div>
+      <p>Name of the painting</p>
+      <p>(12.05.2020)</p>
+      <p>330.00 USD</p>
+      <button class="snipcart-add-item slide-buy"
+        data-item-id="pt1"
+        data-item-name="Name of the painting"
+        data-item-price="330"
+        data-item-url="/"
+        data-item-image="images/pt1.jpg"
+        data-item-description="Original painting by Kate Kulish">
+        Buy
+      </button>
+    </div>
+
+    <div class="painting-slide">
+       <div class="slide-media">
+        <img class="painting-slide-image" src="images/pt5.jpg" alt="">
+          <div class="swiper-slide-like">
+            <img class="like__heart" src="./images/heart.svg">
+              <div class="like__count">66</div>
+          </div>
+          <div class="slide-like-btn">
+            <img class="like__btn" src="./images/btnheart.svg">
+          </div>
+</div>
+      <p>Name of the painting</p>
+      <p>(12.05.2020)</p>
+      <p>330.00 USD</p>
+      <button class="snipcart-add-item slide-buy"
+        data-item-id="pt5"
+        data-item-name="Name of the painting"
+        data-item-price="330"
+        data-item-url="/"
+        data-item-image="images/pt5.jpg"
+        data-item-description="Original painting by Kate Kulish">
+        Buy
+      </button>
+    </div>
+
+    <div class="painting-slide">
+       <div class="slide-media">
+        <img class="painting-slide-image" src="images/pt2.jpg" alt="">
+          <div class="swiper-slide-like">
+            <img class="like__heart" src="./images/heart.svg">
+              <div class="like__count">66</div>
+          </div>
+          <div class="slide-like-btn">
+            <img class="like__btn" src="./images/btnheart.svg">
+          </div>
+</div>
+      <p>Name of the painting</p>
+      <p>(12.05.2020)</p>
+      <p>330.00 USD</p>
+      <button class="snipcart-add-item slide-buy"
+        data-item-id="pt2"
+        data-item-name="Name of the painting"
+        data-item-price="330"
+        data-item-url="/"
+        data-item-image="images/pt2.jpg"
+        data-item-description="Original painting by Kate Kulish">
+        Buy
+      </button>
+    </div>
+
+  </div>
+
+  <div class="main-slider-nav">
+    <div class="arrow-left main-prev"></div>
+    <div class="slider-dots main-dots"></div>
+    <div class="arrow-right main-next"></div>
+  </div>
+
+</section>
+
 <div  class="new-painting-block"> 
 <p class="new-painting">new painting</p>
 <img class="new-painting-image" src="./images/Stage1.jpg" alt="New painting">
 <p class="new-painting-text">Name of the painting (15.03.2020)</p>
 <p class="new-painting-price">330.00 USD</p>
-<button class="new-painting-button">BUY</button>
+		<button
+  class="snipcart-add-item new-painting-button"
+  data-item-id="Stage1.jpg"
+  data-item-name="Name of the painting"
+  data-item-price="330"
+  data-item-url="/"
+  data-item-image="images/Stage1.jpg"
+  data-item-description="New painting by Kate Kulish"
+>
+  Buy
+</button>
 </div>
 <div  class="philosophy__block">
 <p class="philosophy">philosophy</p>
@@ -162,11 +229,10 @@ In fact, I understand this more than ever, as since many of the cities in my bel
 	</div>
 	 </div>
 <center><div class="swiper-block-nav swiper__block__nav__swiper2">
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
+<div class="swiper-button-prev swiper2-prev"></div>
+<div class="swiper-button-next swiper2-next"></div>
 
-<!-- Добавление буллитов в HTML код -->
-<div class="swiper-pagination pagination__swiper2"></div>
+<div class="swiper-pagination swiper2-pagination pagination__swiper2"></div>
 </div></center>   
 </div>  
 </div>
@@ -254,9 +320,11 @@ In fact, I understand this more than ever, as since many of the cities in my bel
   
 </div>
  <div class="slider-nav">
-        <div class="arrow-left"></div>
-		<div class="slider-dots"></div>
-        <div class="arrow-right"></div>
+  <div class="arrow-left exh-prev"></div>
+  
+  <div class="slider-dots exh-dots"></div>
+  
+  <div class="arrow-right exh-next"></div>
 </div>
 </div>
 <div class="social-block">
@@ -281,5 +349,87 @@ In fact, I understand this more than ever, as since many of the cities in my bel
 <script src="./scripts/swiper-bundle.min.js"></script> 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
 <script src="./scripts/main.js"></script>
+<script>
+  window.SnipcartSettings = {
+    publicApiKey: 'ZjFkODIzYzItODAyMS00ODY3LTk2NGYtZDRhZmYzYTEyNmEyNjM5MDAyODQ3NTU0MDMyODk0',
+
+    loadStrategy: "on-user-interaction",
+    timeoutDuration: 4000,
+
+    currency: "usd",
+
+    addProductBehavior: "open",
+    modalStyle: "side",
+
+    version: "3.7.1",
+
+    loadCSS: true
+  };
+
+  (function(){
+    var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");
+    var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);
+    var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");
+    var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");
+    var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||(
+      window.SnipcartSettings.version!="3.0" &&
+      window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:true,sensitivity:"base"})===-1
+    ),
+    m=["focus","mouseover","touchmove","scroll","keydown"];
+
+    window.LoadSnipcart=o;
+
+    document.readyState==="loading"
+      ? document.addEventListener("DOMContentLoaded",r)
+      : r();
+
+    function r(){
+      window.SnipcartSettings.loadStrategy==="on-user-interaction" &&
+        (m.forEach(t=>document.addEventListener(t,o)),
+         setTimeout(o,window.SnipcartSettings.timeoutDuration));
+    }
+
+    var a=false;
+    function o(){
+      if(a) return;
+      a=true;
+
+      let t=document.getElementsByTagName("head")[0],
+          e=document.querySelector("#snipcart"),
+          i=document.querySelector(`script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),
+          n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);
+
+      e || (e=document.createElement("div"),
+            e.id="snipcart",
+            e.hidden=true,
+            document.body.appendChild(e));
+
+      v(e);
+
+      i || (i=document.createElement("script"),
+            i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,
+            i.async=true,
+            t.appendChild(i));
+
+      if (!n && window.SnipcartSettings.loadCSS){
+        n=document.createElement("link");
+        n.rel="stylesheet";
+        n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`;
+        t.prepend(n);
+      }
+
+      m.forEach(g=>document.removeEventListener(g,o));
+    }
+
+    function v(t){
+      if(!f) return;
+      t.dataset.apiKey = window.SnipcartSettings.publicApiKey;
+      t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior;
+      t.dataset.configModalStyle = window.SnipcartSettings.modalStyle;
+      t.dataset.currency = window.SnipcartSettings.currency;
+    }
+  })();
+</script>
+
 </body>
 </html>
