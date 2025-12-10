@@ -31,6 +31,6 @@
       </div>   
   </nav>
 	<div class="rights">
-      <p class="rights__text">&#xa9 2022 all rights reserved</p>
+      <p class="rights__text">&#xa9 2025 all rights reserved</p>
 	</div>
 </footer>
